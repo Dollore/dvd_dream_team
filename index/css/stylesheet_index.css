@@ -5,13 +5,22 @@ body {
     height: 100vh;
 } 
 
-.container_css {
-    background-color: cadetblue;
-    /* Grid */
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 76px 300px max-content max-content;
-    justify-content: center;   
+ /* unvisited link */
+a:link, a:visited{
+    color: honeydew;
+    text-decoration: none;
+}
+
+
+/* mouse over link */
+a:hover {
+    color: rgb(111, 255, 233);
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(91, 192, 190);
+    text-decoration: none;
 }
 
 .image {
@@ -30,6 +39,15 @@ body {
 }
 
 /*Zestaw zasad dla gridów w #container */
+
+.container_css {
+    background-color: cadetblue;
+    /* Grid */
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 76px 300px max-content max-content;
+    justify-content: center;   
+}
 
 /* Dane do Navbara */ 
 .child_navbar {
@@ -84,4 +102,18 @@ body {
 .content_footer {
     display: grid;
     justify-content: center;
+    grid-template-rows: 2em 2em;
 }
+#social {
+    margin: auto;
+}
+
+#info {
+    margin: auto;
+    
+}
+
+.info_a {
+    padding-right: 1em;
+}
+/* https://coolors.co/0b132b-1c2541-3a506b-5bc0be-6fffe9 */
