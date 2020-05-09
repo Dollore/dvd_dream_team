@@ -5,32 +5,58 @@ body {
     height: 100vh;
 } 
 
-.container {
+.container_css {
     background-color: cadetblue;
     /* Grid */
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 50px 300px max-content 40px;
+    grid-template-rows: 76px 300px max-content max-content;
     justify-content: center;   
 }
 
+.image {
+    width: 50px;
+    height: 50px;
+}
+
+.url_text {
+    color: honeydew;
+}
+
+.button_standard {
+    color: rgb(11, 19, 43);
+    background-color: rgb(91, 192, 190);
+    border: 1px solid rgb(91, 192, 190) !important;
+}
+
 /*Zestaw zasad dla gridów w #container */
+
+/* Dane do Navbara */ 
 .child_navbar {
-    background-color: cornflowerblue;
+    background-color: rgb(11, 19, 43);
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
 }
 
+/* Dane do Headera */
 .child_header {
-    background-color: darkblue;
+    background-color: grey;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
+    justify-self: stretch;
+    background-image: url(img/watching-tv.jpg);
 }
 
+.header_searchbar{
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/* Dane do Main */ 
 .child_main {
     background-color: darkgoldenrod;
     grid-column-start: 2;
@@ -43,12 +69,19 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-content: stretch;
 }
+
+/* Dane do Footera */ 
 .child_footer {
     background-color: darkgray;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 4;
-    max-width: 900px;
     align-self: center;
+    justify-content: center;
+}
+
+.content_footer {
+    display: grid;
+    justify-content: center;
 }

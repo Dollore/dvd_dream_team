@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-
-    <!-- To jest bardzo WAŻNE testujemy -->
-    <!-- Rafal i bardzo WAŻNY komentarz -->
-    <!-- istotny komentarz zuzy-->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wypożyczalnia DVD</title>
     <link rel="stylesheet" href="index/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index/css/stylesheet_index.css">
+    <link rel="stylesheet" href="index/css/stylesheet_index.css" >
 </head>
 <body>
-<div id="container" class="container">
-    <div id="navbar" class="child_navbar"></div>
-    <div id="header" class="child_header">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex ducimus iusto adipisci, eaque suscipit ad eligendi exercitationem facilis voluptates reiciendis quisquam temporibus sint provident error dolores neque, et quaerat impedit.</div>
-    <div id="main" class="child_main ">
-        <div id="" class="content_main">
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
-        </div>
-    </div>
-    <div id="footer" class="child_footer"><!--
-        <div id="social" class="">
-            <a href="" class="" target="_blank"><svg class="">
-                <use filter="" foucusable="ture"
-            </svg></a>
-            <a href="" class="" target="_blank"><svg class="">
-                <use filter="" foucusable="ture"
-            </svg></a>
-            <a href="" class="" target="_blank"><svg class="">
-                <use filter="" foucusable="ture"
-            </svg></a>
-            <a href="" class="" target="_blank"><svg class="">
-                <use filter="" foucusable="ture"
-            </svg></a>
-        </div>
-        <div id="info" class=""></div>-->
+<div id="container" class="container_css">
+    <div id="navbar" class="child_navbar">
+        <nav class="navbar navbar-expand-lg">
+            <!-- Just an image -->
+            <nav class="navbar ">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" width="30" height="30" alt="">
+                </a>
+            </nav>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link url_text" href="#">DVD_Dream_team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link url_text" href="index.html">Główna</a>
+                    </li>
+                    
+                </ul>
+                    <button class="btn my-2 my-sm-0 url_text button_standard" type="submit">Login</button>
+            </div>
+        </nav>
     </div>
 
+    <div id="header" class="child_header ">
+        <div class="header_searchbar">
+            <input type="text"  placeholder="Wyszukaj..">
+        </div>
+    </div>
+    <div id="main" class="child_main ">
+        <h1>Popularne</h1>
+        <div id="" class="content_main">
+            <div id="" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut, culpa reprehenderit itaque laboriosam debitis, aut dolorem quisquam hic possimus ex. Autem, voluptatum sint? Eum officia blanditiis distinctio libero omnis.</div>
+            <div>Muszę jeszcze ogarnąć karuzele</div>
+        </div>
+    </div>
+
+    <div id="footer" class="child_footer content_footer">
+            <div id="social" class="">
+                <!-- CZEMU TO NIE DZIAŁA????-->
+                TU POWINNY BYĆ IKONY ALE NIE DZIAŁAJĄ (Zobacz F12)
+                <a href="#" class="" target="_blank"><img src="img/social/png/facebook.png" class="image" alt="facebook"></a>
+                <a href="#" class="" target="_blank"><img src="img/social/png/instagram.png" class="image"  alt="instagram"></a>
+                <a href="#" class="" target="_blank"><img src="img/social/png/twitter.png" class="image" alt="twitter"></a>
+                <a href="#" class="" target="_blank"><img src="img/social/png/youtube.png" class="image" alt="youtube"></a>
+            </div>
+
+            <div id="info" class="">
+                <a href="" class="">Prywatność</a>
+                <a href="" class="">Pomoc</a>
+                <a href="" class="">Cookies</a>
+                <a href="" class="">O nas</a>
+            <!-- "Icon made by Freepik perfect from www.flaticon.com"-->
+            </div>
+        </div>
+
 </div>
+<script src="index/js/jquery-3.5.1.js"></script>
 <script src="index/js/bootstrap.min.js"></script>
 </body>
 </html>
