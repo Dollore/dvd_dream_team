@@ -84,7 +84,7 @@
 
         </main>
 
-        <footer id="footer">
+        <footer id="footer" class="">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">

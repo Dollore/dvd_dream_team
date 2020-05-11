@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/film', function() {
+    return view('film_page');
+});
+
 Auth::routes([
     'verify' => true
 
