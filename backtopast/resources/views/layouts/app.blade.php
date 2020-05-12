@@ -26,6 +26,8 @@
 <body>
     <div id="app" class="myContainer">
 
+        <div class="myMain">
+
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm myNavLink">
 
                     <!-- Left Side Of Navbar -->
@@ -84,7 +86,10 @@
 
         </main>
 
-        <footer id="footer" class="">
+    </div>
+</div>
+
+        <footer class="myFooter">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
@@ -137,6 +142,5 @@
 
         </footer>
 
-    </div>
 </body>
 </html>

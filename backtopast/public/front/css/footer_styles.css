@@ -1,25 +1,21 @@
 
 html {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/*.myContainer {
     position: relative;
-    min-height: 100vh;
-}*/
+    min-height: 100%;
+}
 
-/*#footer {
+.myContainer {
+    min-height: 100%;
+    padding-bottom: 300px;
+}
+
+.myFooter {
     position: absolute;
     bottom: 0;
+    height: 300px;
     width: 100%;
-}*/
+    /*margin-top: -500px;*/
+}
 
 footer p {
     color: #999;
