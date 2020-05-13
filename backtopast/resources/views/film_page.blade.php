@@ -2,7 +2,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
     <div class="row justify-content-md-center">
 
             <div class="col">
@@ -28,10 +27,10 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img\the_shawshank_redemption\tytul.jpg" class="d-block img-fluid" alt="Karta tytułowa">
+                            <img src="{{ asset('img/films/zielona_mila/1.jpeg') }}" class="d-block img-fluid" alt="Karta tytułowa">
                         </div>
                         <div class="carousel-item">
-                            <img src="img\the_shawshank_redemption\cast.jpg" class="d-block img-fluid" alt="cast">
+                            <img src="{{ asset('img/films/zielona_mila/2.jpg') }}" class="d-block img-fluid" alt="cast">
                         </div>
 
                     </div>
@@ -70,7 +69,6 @@
                         </div>
                     </div>
                 </div>
-        </div>
         </div>
 
 @endsection

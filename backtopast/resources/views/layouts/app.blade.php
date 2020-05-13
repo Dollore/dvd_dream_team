@@ -24,9 +24,7 @@
 </head>
 
 <body>
-    <div id="app">
-
-        <div class="myMain">
+        <div class="container-fluid">
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm myNavLink">
 
@@ -86,9 +84,6 @@
 
         </main>
 
-    </div>
-</div>
-
         <footer class="myFooter">
             <div class="footer-top">
                 <div class="container">
@@ -141,6 +136,8 @@
             <p class="footer-bottom-text">All Right reserved by &copy;BackToPast.2020</p>
 
         </footer>
+
+    </div>
 
 </body>
 </html>
