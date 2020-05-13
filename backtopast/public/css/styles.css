@@ -61,3 +61,62 @@ body {
     border-radius: 15px;
     text-shadow: 5px;
 }
+
+/* Dorota - user_profile*/
+.myWhiteCenter{ 
+    color: #fff;
+    text-align:center;
+    font-family: cursive;
+    text-decoration: underline;
+    text-decoration-color: #c65039;
+    padding-bottom: 20px;
+}
+.myButtonOnlyText{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    background-color: rgb(78, 77, 77) !important;
+}
+#myChangeSettings .container table
+{
+    width: 70%;
+    background-color: rgb(31, 30, 30);
+    margin: 0 auto;
+    border-radius: 25px;
+}
+#myChangeSettings .container table td
+{
+	vertical-align: middle;
+	border: none;
+    padding: 15px 22px;
+}
+#myChangeSettings .container table tr{
+    border-bottom: 1px solid #999;
+}
+#myChangeSettings .container table tr:last-child{
+    border-bottom: none;
+}
+#myChangeSettings .container table tr td:last-child{
+    text-align: center;
+}
+#myChangeSettings .container table {
+    border: none;
+    color: #fff
+}
+@media only screen and (max-width: 767px){
+    #myChangeSettings .container table{
+        width: 100%;
+        border-radius: 10px;
+    }
+    #myChangeSettings .container table td{
+        padding: 5px;
+    }
+    #myChangeSettings .container table tr td:first-child{
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width: 991px){
+    #myChangeSettings .container table{
+        width: 90%;
+    }
+}

@@ -21,6 +21,10 @@ Route::get('/film', function() {
     return view('film_page');
 });
 
+Route::get('/profile', function() {
+    return view('user_profile');
+});
+
 Auth::routes([
     'verify' => true
 

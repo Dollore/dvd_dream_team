@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div id="app" class="myContainer">
+    <div id="app">
 
         <div class="myMain">
 
