@@ -19,8 +19,8 @@
     <!-- Styles -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="/front/css/styles.css" >
-    <link rel="stylesheet" href="/front/css/footer_styles.css" >
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/footer_styles.css') }}" >
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                     <!-- Just an image -->
                     <nav class="navbar ">
                         <a class="navbar-brand" href="#">
-                            <img src="/img/logo.png" width="30" height="30" alt="">
+                            <img src="{{ asset('img/logo.png') }}" width="30" height="30" alt="">
                         </a>
                     </nav>
 

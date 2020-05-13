@@ -127,10 +127,14 @@ footer h3 {
 }
 
 /*responsive css */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
 
     .md-mb-30 {
         margin-bottom: 30px;
+    }
+
+    .segment-four form input[type=email] {
+        width: 60%;
     }
 }
 
