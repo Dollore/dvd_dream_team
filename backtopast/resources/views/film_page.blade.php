@@ -2,9 +2,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row justify-content-md-center">
+<link rel="stylesheet" href="{{ asset('css/film_page_styles.css') }}" >
+<div class="container">
+    <div class="row d-flex justify-content-between">
 
-            <div class="col">
+            <div class="myTitle" >
                 <h1>Tytuł filmu</h1>
             </div>
 
@@ -12,23 +14,18 @@
                 
             </div>
             
-            <div class="col button_film" >
-                <button type="button" class="btn btn-primary" >Zamów</button>
-            </div>
+
             
         </div>
         <div class="row">
-            <div class="col karuzela justify-content-md-center">
+            <div class="col-12 karuzela">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
+                    
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="{{ asset('img/films/zielona_mila/1.jpeg') }}" class="d-block img-fluid" alt="Karta tytułowa">
                         </div>
+                        
                         <div class="carousel-item">
                             <img src="{{ asset('img/films/zielona_mila/2.jpg') }}" class="d-block img-fluid" alt="cast">
                         </div>
@@ -44,31 +41,34 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        
+            <div class="col-12 button_film " >
+            <button type="button" class="btn mySubmitButton btn-lg myBorrowButton" >Wypożycz</button>
+            </div>
+            
             <div class="row">
-                <div class="col">
-                    <h1>Tytuł filmu</h1>
+                <div class="col-12">
+                    <h2>Tytuł filmu</h2>
                 </div>
             </br>
                 <div>
-                    <div class="col">
+                    <div class="col-12">
                         <span>Gatunek</span>
                     </div>
                     <br>
-                    <div class="col">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur ipsam, dolor culpa tempora consectetur. Adipisci quidem, eos beatae nisi repellat quibusdam, sunt doloribus illum voluptatibus distinctio, nesciunt error nam!</span>
+                    <div class="col-12">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur ipsam, dolor culpa tempora consectetur. Adipisci quidem, eos beatae nisi repellat quibusdam, sunt doloribus illum voluptatibus distinctio, nesciunt error nam! lorem10000</span>
                     </div>
                     <br>
                     <div class="row ">
-                        <div class="col-sm col-6 col-sm-4">
+                        <div class="col-sm-12 col-md-6">
                             <span>rezyser</span>
                         </div>
-                        <div class="col-sm col-6 col-sm-4">
+                        <div class="col-sm-12 col-md-6">
                             aktorzy
                         </div>
                     </div>
                 </div>
         </div>
-
+</div>
 @endsection

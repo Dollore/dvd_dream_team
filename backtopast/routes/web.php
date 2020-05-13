@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/film', function() {
     return view('film_page');
-});
+})->name('film');
 
 Route::get('/profile', function() {
     return view('user_profile');

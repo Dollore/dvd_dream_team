@@ -24,7 +24,7 @@
 </head>
 
 <body>
-        <div class="container-fluid myContainer">
+<div class="container-fluid myContainer">
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm myNavLink">
 
@@ -45,15 +45,18 @@
                         <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
                         </li>
+                        <li class="nav-item active">
+                                    <a class="nav-link" href="{{ route('film') }}">{{ __('Film') }}</a>
+                                </li>
                         @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
                                 </li>
                             @endif
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Logowanie') }}</a>
                             </li>
                         @else
@@ -79,17 +82,15 @@
                     </div>
         </nav>
 
-        <main class="py-4">
+        <div class="py-4 myFlex">
             @yield('content')
 
-        </main>
         </div>
-
-        <div class="myFooter">
+        <div class="myFooter col-12 footer">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
                             <h3>BackToPast</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem autem eveniet at
                                 que quo assumenda consequatur natus ullam facere soluta cupiditate aut et, dicta cumque repellat, quis esse debitis. Quibusdam, harum.
@@ -97,7 +98,7 @@
 
                         </div>
 
-                        <div class="col-md-3 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
                             <h2>Useful links</h2>
                             <ul>
                                 <li><a href="#">Event</a></li>
@@ -108,7 +109,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 col-xs-12 segment-three sm-mb-30">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-three sm-mb-30">
                             <h2>Follow Us</h2>
                             <p>Please Follow us on our Social Media Profile in order to keep updated. Lorem ipsum dolor sit amet consectetur, 
                                 adipisicing elit. Vitae earum, accusantium officiis labore reiciendis necessitatibus quam voluptas illo nemo id natus ducimus corporis deserunt, velit quia vero alias voluptatum deleniti.
@@ -119,7 +120,7 @@
                             <a href="#"><i class="fa fa-pinterest"></i></a>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 col-xs-12 segment-four sm-mb-30">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-four sm-mb-30">
                             <h2>Our Newsletter</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis atque nisi quidem 
                                 vero expedita ullam veniam excepturi ipsam veritatis alias temporibus iure quia corrupti nihil, voluptatum voluptatibus amet quae.
@@ -137,6 +138,9 @@
             <p class="footer-bottom-text">All Right reserved by &copy;BackToPast.2020</p>
 
     </div>
+</div>
+
+        
 
 
 </body>

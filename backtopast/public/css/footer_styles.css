@@ -1,6 +1,8 @@
 
-.myContainer {
-    padding: 0 !important;
+.myFooter {
+    align-self: flex-end;
+    bottom: 0;
+    flex-basis: auto;
 }
 
 footer p {
@@ -37,7 +39,7 @@ footer h3 {
 
 .segment-two h2:before {
     content: '|';
-    color: #c65039;
+    color: #c00;
     padding-right: 10px;
 }
 
@@ -65,7 +67,7 @@ footer h3 {
 
 .segment-three h2:before {
     content: '|';
-    color: #c65039;
+    color: #c00;
     padding-right: 10px;
 }
 
@@ -91,14 +93,15 @@ footer h3 {
 
 .segment-four h2:before {
     content: '|';
-    color: #c65039;
+    color: #c00;
     padding-right: 10px;
 }
 
 .segment-four form input[type=submit] {
-    background: #c65039;
+    background: #c00;
     border: none;
     padding: 3px 5px;
+    border-radius: 10px;
     margin-left: 0;
     color: #fff;
     text-transform: uppercase;
@@ -116,7 +119,7 @@ footer h3 {
 @media only screen and (min-width: 768px) {
 
     .md-mb-30 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .segment-four form input[type=email] {
@@ -127,7 +130,7 @@ footer h3 {
 @media only screen and (max-width: 767px) {
 
     .sm-mb-30 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .footer-top {
         padding: 50px 0;

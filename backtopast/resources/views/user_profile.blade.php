@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('css/user_profile_styles.css') }}" >
 <h2 class="myWhiteCenter">Ogólne ustawienia konta</h2> 
     <div id="myChangeSettings">
         <div class="container">

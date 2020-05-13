@@ -1,9 +1,29 @@
-/*jprd */ 
-body {
+ body {
     background: #111;
     color: white;
+    scroll-behavior: smooth;
+    
 }
 
+.myContainer {
+    display: flex;
+    padding: 0 !important;
+    min-height: 100vh;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.myFlex {
+    flex-grow: 1;
+}
+
+/* Zmiany w bootstrap*/
+.row {
+    margin: 0px;
+}
+.col-12 {
+    padding: 0;
+}
 /* Navbar stuff */
 .myNavLink {
     font-size: 1.5em;
@@ -27,9 +47,11 @@ body {
 
 .myForm input {
     background-color: #111;
-    border: 1px solid #3390FF;
-    border-radius: 15px;
+    border: 1px solid #c00;
+    border-radius: 10px;
     color: #DCDCDC;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .myForm input:focus {
@@ -37,7 +59,7 @@ body {
     color: #DCDCDC;
     border: none;
     box-shadow: none;
-    border: 3px solid green;
+    border: 3px solid #c00;
 }
 
 .myFormHeader {
@@ -47,76 +69,23 @@ body {
 }
 
 .mySubmitButton {
+    margin-top: 20px;
     font-size: 1.2em;
-    background-color: #008000;
+    background-color: #c00;
     box-shadow: none;
-    border: 1px solid green;
-    border-radius: 15px;
+    border: 1px solid #c00;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 2px;
 }
 
 .mySubmitButton:hover {
-    background-color: #00e600;
+    background-color: rgb(218, 2, 2);
     box-shadow: none;
-    border: 1px solid green;
-    border-radius: 15px;
+    border: 1px solid #c00;
+    border-radius: 10px;
     text-shadow: 5px;
+    color: white;
+    letter-spacing: 2px;
 }
 
-/* Dorota - user_profile*/
-.myWhiteCenter{ 
-    color: #fff;
-    text-align:center;
-    font-family: cursive;
-    text-decoration: underline;
-    text-decoration-color: #c65039;
-    padding-bottom: 20px;
-}
-.myButtonOnlyText{
-    margin:0;
-    padding:0;
-    cursor: pointer;
-    background-color: rgb(78, 77, 77) !important;
-}
-#myChangeSettings .container table
-{
-    width: 70%;
-    background-color: rgb(31, 30, 30);
-    margin: 0 auto;
-    border-radius: 25px;
-}
-#myChangeSettings .container table td
-{
-	vertical-align: middle;
-	border: none;
-    padding: 15px 22px;
-}
-#myChangeSettings .container table tr{
-    border-bottom: 1px solid #999;
-}
-#myChangeSettings .container table tr:last-child{
-    border-bottom: none;
-}
-#myChangeSettings .container table tr td:last-child{
-    text-align: center;
-}
-#myChangeSettings .container table {
-    border: none;
-    color: #fff
-}
-@media only screen and (max-width: 767px){
-    #myChangeSettings .container table{
-        width: 100%;
-        border-radius: 10px;
-    }
-    #myChangeSettings .container table td{
-        padding: 5px;
-    }
-    #myChangeSettings .container table tr td:first-child{
-        padding-left: 10px;
-    }
-}
-@media only screen and (max-width: 991px){
-    #myChangeSettings .container table{
-        width: 90%;
-    }
-}
