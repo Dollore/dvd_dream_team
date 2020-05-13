@@ -24,7 +24,7 @@
 </head>
 
 <body>
-        <div class="container-fluid">
+        <div class="container-fluid myContainer">
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm myNavLink">
 
@@ -83,8 +83,9 @@
             @yield('content')
 
         </main>
+        </div>
 
-        <footer class="myFooter">
+        <div class="myFooter">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
@@ -135,9 +136,8 @@
 
             <p class="footer-bottom-text">All Right reserved by &copy;BackToPast.2020</p>
 
-        </footer>
-
     </div>
+
 
 </body>
 </html>

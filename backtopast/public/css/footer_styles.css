@@ -1,20 +1,6 @@
 
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 .myContainer {
-    min-height: 100%;
-    padding-bottom: 300px;
-}
-
-.myFooter {
-    position: absolute;
-    bottom: 0;
-    height: 300px;
-    width: 100%;
-    /*margin-top: -500px;*/
+    padding: 0 !important;
 }
 
 footer p {
