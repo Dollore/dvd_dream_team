@@ -24,6 +24,10 @@
 .col-12 {
     padding: 0;
 }
+
+.py-4 {
+    padding-bottom: 0 !important;
+}
 /* Navbar stuff */
 .myNavLink {
     font-size: 1.5em;
