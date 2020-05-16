@@ -1,5 +1,5 @@
  body {
-    background: #111;
+    background: #121212;
     color: white;
     scroll-behavior: smooth;
     
@@ -37,21 +37,36 @@
 /* Forms stuff */
 .myFormBorder {
     border: none;
+    
 }
 
 .myFormHeader {
     text-align: center;
+    background-color: #121212 !important;
 }
 
 .myForm {
     font-size: 1.3em;
     color: white;
-    background: #111;
+    background-color: #121212;
+    
+}
+
+.myForm a{
+    text-decoration: none;
+    color:#bbbbbb;
+    font-size: 1em;
+    text-align: center;
+}
+
+.myForm a:hover {
+    text-decoration: none;
+    color:#dddddd;
 }
 
 .myForm input {
     background-color: #111;
-    border: 1px solid #c00;
+    border: 1px solid #ff6600;
     border-radius: 10px;
     color: #DCDCDC;
     font-size: 1.2rem;
@@ -63,7 +78,7 @@
     color: #DCDCDC;
     border: none;
     box-shadow: none;
-    border: 3px solid #c00;
+    border: 3px solid #ff6600;
 }
 
 .myFormHeader {
@@ -84,7 +99,7 @@
 }
 
 .mySubmitButton:hover {
-    background-color: rgb(218, 2, 2);
+    background-color: #ff0000;
     box-shadow: none;
     border: 1px solid #c00;
     border-radius: 10px;
