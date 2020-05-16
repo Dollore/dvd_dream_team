@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-lg-6 col-md-12 offset-lg-5 col-sm-12">
+                            <div class="col-lg-6 offset-lg-4 text-center">
                                 <button type="submit" class="btn  mySubmitButton">
                                     {{ __('Zarejestruj się') }}
                                 </button>

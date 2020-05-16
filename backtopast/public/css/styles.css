@@ -54,14 +54,14 @@
 
 .myForm a{
     text-decoration: none;
-    color:#bbbbbb;
+    color:#ff6600;
     font-size: 1em;
     text-align: center;
 }
 
 .myForm a:hover {
     text-decoration: none;
-    color:#dddddd;
+    color:#ff9100;
 }
 
 .myForm input {
@@ -108,3 +108,14 @@
     letter-spacing: 2px;
 }
 
+.myResendButton {
+    text-decoration: none;
+    color:#ff6600;
+    font-size: 1em;
+    text-align: center;   
+}
+
+.myResendButton:hover {
+    text-decoration: none;
+    color:#ff9100;
+}
