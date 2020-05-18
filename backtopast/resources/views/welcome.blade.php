@@ -19,11 +19,11 @@
       <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
-      <!--<div class="swiper-slide"><img src="img/6.jpg" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="img/7.jpg" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="img/8.jpg" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="img/9.jpg" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="img/10.jpg" alt="Movie Title"></div>-->
+      <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
+      <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
+      <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
+      <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
+      <div class="swiper-slide"><img src="{{ asset('img/films/test1.jpg') }}" alt="Movie Title"></div>
     </div>
     <!-- Add Pagination -->
     <!--<div class="swiper-pagination"></div> -->
@@ -55,23 +55,23 @@
 </div> -->
 
 <!-- Swiper JS -->
-<script href="{{ asset('js/package/js/swiper.min.js') }}"> </script>
+<script src="{{ asset('js/package/js/swiper.js') }}"> </script>
 
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper('.swiper-container', {
+    autoHeight: true,
     slidesPerView: 6,
     spaceBetween: 10,
     slidesPerGroup: 2,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
+
+  console.log("XD");
 </script>
 </div>
 <div class="py-4 myFlex"> <!-- Żeby się nie gryzl z zamknieciem myFlex z layouta -->
