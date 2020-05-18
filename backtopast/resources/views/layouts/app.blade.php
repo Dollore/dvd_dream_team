@@ -53,7 +53,10 @@
                         </li>
                         <li class="nav-item active">
                                     <a class="nav-link" href="{{ route('film') }}">{{ __('Film') }}</a>
-                                </li>
+                        </li>
+                        <li class="nav-item active">
+                                    <a class="nav-link" href="{{ route('profile') }}">{{ __('Profil') }}</a>
+                        </li>
                         @if (Route::has('register'))
                                 <li class="nav-item active">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>

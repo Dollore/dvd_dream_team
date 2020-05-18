@@ -18,7 +18,7 @@
     <div class="netflix-slider ">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/1.jpeg') }}" alt="Movie Title"></div>
+                <div class="swiper-slide"><img src="{{ asset('img/films/contratiempo/3.jpg') }}" alt="Movie Title"></div>
                 <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
                 <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/3.jpeg') }}" alt="Movie Title"></div>
                 <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/4.jpg') }}" alt="Movie Title"></div>

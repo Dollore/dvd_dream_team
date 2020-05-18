@@ -23,7 +23,7 @@ Route::get('/film', function() {
 
 Route::get('/profile', function() {
     return view('user_profile');
-});
+})->name('profile');;
 
 Auth::routes([
     'verify' => true
