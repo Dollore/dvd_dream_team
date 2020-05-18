@@ -7,10 +7,10 @@
 @section('content')
     
 </div> <!-- Zamykam myFlex z layouta -->
-    <!-- Swiper -->
+<div class="myDisableCol">    <!-- Swiper -->
+  
   <h1>BACKTOPAST</h1>
-
-<div class="netflix-slider">
+<div class="netflix-slider ">
   <h2>Popularne</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -73,8 +73,8 @@
     },
   });
 </script>
-
-<div> <!-- Żeby się nie gryzl z zamknieciem myFlex z layouta -->
+</div>
+<div class="py-4 myFlex"> <!-- Żeby się nie gryzl z zamknieciem myFlex z layouta -->
 
 @endsection
    
