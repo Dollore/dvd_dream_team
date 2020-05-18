@@ -1,4 +1,4 @@
-
+<!--Komentarz -->
 @extends('layouts.app')
 
 <link href="{{ asset('js/package/css/swiper.min.css') }}" rel="stylesheet">
