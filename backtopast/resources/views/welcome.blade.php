@@ -10,7 +10,7 @@
   
   <h1>BACKTOPAST</h1>
 <div class="netflix-slider ">
-  <h2>Popularne</h2>
+  <h2 class="myh2">Popularne</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><a href="{{ route('film') }}"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></a></div>
@@ -31,7 +31,7 @@
 </div>
 
 <div class="netflix-slider">
-  <h2>Continue watching...</h2>
+  <h2 class="myh2">Ostatnio dodane</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
@@ -58,10 +58,10 @@
 <script>
   var swiper = new Swiper('.swiper-container', {
     
-    init: true,
+    init: true,/*
     slidesPerView: 5,
     spaceBetween: 10,
-    slidePerGroup: 5,
+    slidePerGroup: 5,*/
     updateOnWindowResize: true,
     grabCursor: true,
     loop: true,
@@ -71,26 +71,46 @@
       prevEl: '.swiper-button-prev',
     },
 
-    /*breakpoints: {
+    breakpoints: {
       // when window width is >= 320px
       0: {
         slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0
+        spaceBetween: 0,
+        slidesPerGroup: 1
       },
       // when window width is >= 480px
       576: {
         slidesPerView: 2,
         spaceBetween: 10,
-        slidesPerGroup: 1
+        slidesPerGroup: 2
       },
-      // when window width is >= 640px
+      // when window width is >= 768px
       768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        slidesPerGroup: 3
+      },
+      1080: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        slidesPerGroup: 4
+      },
+      1366: {
         slidesPerView: 5,
         spaceBetween: 10,
-        slidePerGroup: 5
-      }
-    }*/
+        slidesPerGroup: 5
+      },
+      1440: {
+        slidesPerView: 6,
+        spaceBetween: 10,
+        slidesPerGroup: 6
+      },
+      1600: {
+        slidesPerView: 7,
+        spaceBetween: 10,
+        slidesPerGroup: 7
+      },
+    }
   });
 
 </script>

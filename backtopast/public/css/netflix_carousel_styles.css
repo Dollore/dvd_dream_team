@@ -5,6 +5,10 @@
   XDDDD
 }*/
 
+.myh2 {
+  padding-left: 25px;
+}
+
 .swiper-container {
   margin-left: 10px;
   margin-right: 10px;
@@ -50,6 +54,10 @@ h1 {
 
 :root {
   --swiper-theme-color: #fff;
+}
+
+.netflix-slider {
+  padding-bottom: 15px;
 }
 
 .netflix-slider .swiper-wrapper {
