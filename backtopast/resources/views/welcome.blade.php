@@ -1,19 +1,19 @@
-<!--Komentarz -->
 @extends('layouts.app')
 
 <link href="{{ asset('js/package/css/swiper.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/netflix_carousel_styles.css') }}" rel="stylesheet">
 
 @section('content')
-    
+
 </div> <!-- Zamykam myFlex z layouta -->
-  
-  <h1>BACKTOPAST</h1>
+
+<h1>BACKTOPAST</h1>
 <div class="netflix-slider ">
   <h2 class="myh2">Popularne</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><a href="{{ route('film') }}"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></a></div>
+      <div class="swiper-slide"><a href="{{ route('film') }}"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}"
+            alt="Movie Title"></a></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
@@ -44,12 +44,12 @@
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
       <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-    </div> 
+    </div>
 
     <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> 
+    <div class="swiper-button-prev"></div>
   </div>
-</div> 
+</div>
 
 <!-- Swiper JS -->
 <script src="{{ asset('js/package/js/swiper.js') }}"> </script>
@@ -57,7 +57,7 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper('.swiper-container', {
-    
+
     init: true,/*
     slidesPerView: 5,
     spaceBetween: 10,
@@ -115,7 +115,7 @@
 
 </script>
 
-<div class="py-4 myFlex"> <!-- Żeby się nie gryzl z zamknieciem myFlex z layouta -->
+<div class="py-4 myFlex">
+  <!-- Żeby się nie gryzl z zamknieciem myFlex z layouta -->
 
-@endsection
-   
+  @endsection

@@ -1,65 +1,72 @@
-
 .myh2 {
-    padding-left: 25px;
-  }
+  padding-left: 25px;
+}
+
+/* Zmiana swipera */
+.swiper-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
   
-  .swiper-container {
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 1200px;
-    margin: 0 auto !important;
-  }
-  
-  .swiper-wrapper {
-    height: auto;
-  }
+.swiper-wrapper {
+  height: auto;
+}
     
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #121212;
-    width: 100%;
-    height: auto !important;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    transition: transform .2s; /* Animation */
-    padding: 20px;
-  }
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #121212;
+  width: 100%;
+  height: auto !important;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: transform .2s; /* Animation */
+  padding: 20px;
+}
 
-  .swiper-slide-active {
-      z-index: 1;
-  }
-  
-  .swiper-slide img {
-    max-width: 1100px;
-    max-height: 540px;
-  }
-  
-  :root {
-    --swiper-theme-color: #fff;
-  }
-  
-  .netflix-slider .swiper-wrapper {
-    padding: 20px 0;
-  }
-  
-  .netflix-slider .swiper-slide {
-    -webkit-transition: 250ms all;
-    transition: 250ms all;
-  }
-  
+.swiper-slide-active {
+  z-index: 1;
+}
 
+.swiper-pagination-bullet {
+	background: #c00;
+	opacity: .8;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1 !important;
+	background: var(--swiper-pagination-color,var(--swiper-theme-color)) !important;
+}
+  
+.swiper-slide img {
+  max-width: 1100px;
+  max-height: 540px;
+}
+
+:root {
+  --swiper-theme-color: #fff;
+}
+
+.netflix-slider .swiper-wrapper {
+  padding: 20px 0;
+}
+
+.netflix-slider .swiper-slide {
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
 
 @media only screen and (max-width: 940px) {
-
     .swiper-slide img {
     max-width: 1100px;
     max-height: 60vw;
