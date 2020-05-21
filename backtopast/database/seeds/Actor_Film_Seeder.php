@@ -160,5 +160,157 @@ class Actor_Film_Seeder extends Seeder
             'actor_id' => 26,
             'film_id' => 10,            
         ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 8,
+            'film_id' => 11,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 27,
+            'film_id' => 11,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 28,
+            'film_id' => 11,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 29,
+            'film_id' => 12,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 30,
+            'film_id' => 12,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 31,
+            'film_id' => 12,            
+        ]);
+         
+        DB::table('actor_film')->insert([
+            'actor_id' => 32,
+            'film_id' => 13,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 33,
+            'film_id' => 13,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 34,
+            'film_id' => 13,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 35,
+            'film_id' => 14,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 36,
+            'film_id' => 14,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 37,
+            'film_id' => 14,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 2,
+            'film_id' => 15,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 38,
+            'film_id' => 15,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 39,
+            'film_id' => 15,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 40,
+            'film_id' => 16,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 2,
+            'film_id' => 16,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 41,
+            'film_id' => 16,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 2,
+            'film_id' => 17,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 26,
+            'film_id' => 17,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 42,
+            'film_id' => 17,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 43,
+            'film_id' => 18,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 44,
+            'film_id' => 18,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 45,
+            'film_id' => 18,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 43,
+            'film_id' => 19,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 46,
+            'film_id' => 19,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 47,
+            'film_id' => 19,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 48,
+            'film_id' => 20,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 49,
+            'film_id' => 20,            
+        ]);
+
+        DB::table('actor_film')->insert([
+            'actor_id' => 50,
+            'film_id' => 20,            
+        ]);
+
+
     }
 }
