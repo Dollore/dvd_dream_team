@@ -48,9 +48,6 @@
                         <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('film') }}">{{ __('Film') }}</a>
-                    </li>
-                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('profile') }}">{{ __('Profil') }}</a>
                     </li>
                     @if (Route::has('register'))

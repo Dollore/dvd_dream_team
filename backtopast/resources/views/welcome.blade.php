@@ -12,17 +12,14 @@
   <h2 class="myh2">Popularne</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><a href="{{ route('film') }}"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}"
+
+      @foreach ($popular as $film)
+
+        <div class="swiper-slide"><a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}"
             alt="Movie Title"></a></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
+
+      @endforeach
+
     </div>
 
     <div class="swiper-button-next"></div>
@@ -34,18 +31,13 @@
   <h2 class="myh2">Ostatnio dodane</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-      <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-    </div>
+        @foreach ($recent as $film)
 
+          <div class="swiper-slide"><a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}"
+                alt="Movie Title"></a></div>
+
+        @endforeach
+    </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>

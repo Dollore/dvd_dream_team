@@ -8,7 +8,7 @@
 <div class="row d-flex justify-content-md-center ">
 
     <div class="myTitle">
-        <h1>Tytuł filmu</h1>
+        <h1> {{ $film->title }}</h1>
     </div>
 </div> <!-- Zamykam myFlex z layouta -->
 </div>
@@ -16,10 +16,10 @@
 <div class="netflix-slider ">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('img/films/contratiempo/3.jpg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/2.jpg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/3.jpeg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/zielona_mila/4.jpg') }}" alt="Movie Title"></div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}" alt="Movie Title"></div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/2.jpg') }}" alt="Movie Title"></div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/3.jpg') }}" alt="Movie Title"></div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/4.jpg') }}" alt="Movie Title"></div>
         </div>
 
         <div class="swiper-pagination"></div>
@@ -34,26 +34,43 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h2>Tytuł filmu</h2>
+            <h2>{{ $film->title }}</h2>
         </div>
 
         <div>
             <div class="col-12">
-                <span>Gatunek</span>
+                <span>
+                    @foreach ($categories as $cat)
+
+                        {{ $cat->category_name }} &nbsp;
+
+                        @if (!$loop->last)
+                            / &nbsp;
+                        @endif
+
+                    @endforeach
+                
+                </span>
             </div>
             <br>
             <div class="col-12">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur ipsam, dolor culpa tempora
-                    consectetur. Adipisci quidem, eos beatae nisi repellat quibusdam, sunt doloribus illum voluptatibus
-                    distinctio, nesciunt error nam! lorem10000</span>
+                <span>{{ $film->description }}</span>
             </div>
             <br>
             <div class="row ">
                 <div class="col-sm-12 col-md-6">
-                    <span>rezyser</span>
+                    <span>Reżyser: {{ $director->firstname }} {{ $director->lastname }}</span>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    aktorzy
+                    @foreach ($actors as $actor)
+
+                        {{ $actor->firstname }} &nbsp; {{ $actor->lastname }} &nbsp;
+
+                        @if (!$loop->last)
+                            / &nbsp;
+                        @endif
+
+                    @endforeach
                 </div>
             </div>
         </div>

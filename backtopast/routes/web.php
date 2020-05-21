@@ -13,13 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
-Route::get('/film', function() {
-    return view('film_page');
-})->name('film');
+Route::get('/film/{id_film}', 'FilmController@show')->name('film');
 
 Route::get('/profile', function() {
     return view('user_profile');
@@ -31,3 +27,6 @@ Auth::routes([
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware(['verified', 'auth']);
+
+
+Route::get('/test', 'TestController@index')->name('test');
