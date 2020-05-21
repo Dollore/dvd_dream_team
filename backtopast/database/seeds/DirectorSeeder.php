@@ -64,5 +64,55 @@ class DirectorSeeder extends Seeder
             'firstname' => 'Peter',
             'lastname' => 'Weir',   
         ]);
+
+        DB::table('director')->insert([
+            'firstname' => 'Martin',
+            'lastname' => 'Scorsese',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Peter',
+            'lastname' => 'Farrelly',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Bradley',
+            'lastname' => 'Cooper',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Nathan',
+            'lastname' => 'Greno',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Michael',
+            'lastname' => 'Cristofer',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Phillip',
+            'lastname' => 'Noyce',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Daniel',
+            'lastname' => 'Caruso',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Steve',
+            'lastname' => 'Bendelack',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Mel',
+            'lastname' => 'Smith',
+        ]);
+        
+        DB::table('director')->insert([
+            'firstname' => 'Gore',
+            'lastname' => 'Verbinski',
+        ]);
     }
 }

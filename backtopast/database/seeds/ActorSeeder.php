@@ -140,5 +140,125 @@ class ActorSeeder extends Seeder
             'firstname' => 'Ethan',
             'lastname' => 'Hawke',            
         ]);
+
+        DB::table('actor')->insert([
+            'firstname' => 'Mark',
+            'lastname' => 'Ruffalo',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Ben',
+            'lastname' => 'Kingsley',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Viggo',
+            'lastname' => 'Mortensen',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Mahershala',
+            'lastname' => 'Ali',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Linda',
+            'lastname' => 'Cardellini',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Lady',
+            'lastname' => 'Gaga',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Bradley',
+            'lastname' => 'Cooper',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Sam',
+            'lastname' => 'Elliott',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Mandy',
+            'lastname' => 'Moore',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Zachary',
+            'lastname' => 'Levi',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Donna',
+            'lastname' => 'Murphy',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Elizabeth',
+            'lastname' => 'Mitchell',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Eric',
+            'lastname' => 'Cole',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Denzel',
+            'lastname' => 'Washington',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Queen',
+            'lastname' => 'Latifah',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Kiefer',
+            'lastname' => 'Sutherland',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Rowan',
+            'lastname' => 'Atkinson',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Maxim',
+            'lastname' => 'Baldry',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Emma',
+            'lastname' => 'Caunes',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Peter',
+            'lastname' => 'Egan',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'John',
+            'lastname' => 'Mills',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Johnny',
+            'lastname' => 'Depp',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Geoffrey',
+            'lastname' => 'Rush',
+        ]);
+        
+        DB::table('actor')->insert([
+            'firstname' => 'Orlando',
+            'lastname' => 'Bloom',
+        ]);
     }
 }

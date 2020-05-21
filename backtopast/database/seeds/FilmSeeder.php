@@ -111,5 +111,106 @@ class FilmSeeder extends Seeder
             'director_id' => 10,
             'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
         ]);
+
+        DB::table('film')->insert([
+            'director_id' => 11,
+            'title' => 'Wyspa tajemnic',
+            'premiere_year' => 2010,
+            'description' => 'Szeryf federalny Daniels stara się dowiedzieć, jakim sposobem z zamkniętej celi w pilnie strzeżonym szpitalu dla chorych psychicznie przestępców zniknęła pacjentka.',
+            'borrowed' => 98,
+            'pathname' => 'wyspa_tajemnic',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 12,
+            'title' => 'Green Book',
+            'premiere_year' => 2018,
+            'description' => 'Drobny cwaniaczek z Bronksu zostaje szoferem ekstrawaganckiego muzyka z wyższych sfer i razem wyruszają na wielotygodniowe tournée.',
+            'borrowed' => 26,
+            'pathname' => 'green_book',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 13,
+            'title' => 'Narodziny gwiazdy',
+            'premiere_year' => 2018,
+            'description' => 'Płomienny romans między dogasającą gwiazdą muzyki country a nieznaną piosenkarką zmienia ich życie na zawsze.',
+            'borrowed' => 14,
+            'pathname' => 'narodziny_gwiazdy',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 14,
+            'title' => 'Zaplątani',
+            'premiere_year' => 2010,
+            'description' => 'Żyjąca na odludziu Roszpunka, której włosy mają magiczną moc, marzy, by poznać świat. Jej przepustką do wolności jest czarujący łotrzyk Flynn.',
+            'borrowed' => 7,
+            'pathname' => 'zaplatani',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 15,
+            'title' => 'Gia',
+            'premiere_year' => 1998,
+            'description' => 'Burzliwe życie oraz kariera Gii Carangi, niezależnej i pięknej kobiety, która stała się jedną z legend świata mody.',
+            'borrowed' => 22,
+            'pathname' => 'gia',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 16,
+            'title' => 'Kolekcjoner kości',
+            'premiere_year' => 1999,
+            'description' => 'Ekranizacja powieści Jefferego Deavera. Sparaliżowany i pogrążony w depresji detektyw Lincoln Rhyme zostaje poproszony o pomoc w schwytaniu seryjnego mordercy.',
+            'borrowed' => 18,
+            'pathname' => 'kolekcjoner_kosci',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 17,
+            'title' => 'Złodziej życia',
+            'premiere_year' => 2004,
+            'description' => 'Agentka FBI pomaga kanadyjskiej policji w ujęciu seryjnego mordercy.',
+            'borrowed' => 53,
+            'pathname' => 'zlodziej_zycia',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 18,
+            'title' => 'Wakacje Jasia Fasoli',
+            'premiere_year' => 2007,
+            'description' => 'Jaś Fasola wygrywa wycieczkę i wyrusza w pełną przygód podróż do Cannes.',
+            'borrowed' => 102,
+            'pathname' => 'wakacje_jasia_fasoli',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 19,
+            'title' => 'Jaś Fasola: Nadciąga totalny kataklizm',
+            'premiere_year' => 1997,
+            'description' => 'Nieudolny Jaś Fasola przybywa do Ameryki, gdzie dostaje odpowiedzialne zadanie opieki nad cennym obrazem zakupionym przez muzeum w Los Angeles.',
+            'borrowed' => 65,
+            'pathname' => 'jas_fasola_nadciaga_totalny_kataklizm',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+        
+        DB::table('film')->insert([
+            'director_id' => 20,
+            'title' => 'Piraci z Karaibów: Klątwa Czarnej Perły ',
+            'premiere_year' => 2003,
+            'description' => 'Kowal Will Turner sprzymierza się z kapitanem Jackiem Sparrowem, by odzyskać swoją miłość - porwaną córkę gubernatora.',
+            'borrowed' => 48,
+            'pathname' => 'piraci_z_karaibow_klatwa_czarnej_perly',
+            'created_at' => Carbon::now('Europe/Zurich')->toDateTimeString(),
+        ]);
+
     }
 }
