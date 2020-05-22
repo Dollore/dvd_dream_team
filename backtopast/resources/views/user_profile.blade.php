@@ -1,31 +1,29 @@
-
 @extends('layouts.app')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/user_profile_styles.css') }}" >
-<h2 class="myWhiteCenter">Ogólne ustawienia konta</h2> 
-    <div id="myChangeSettings">
+<h2 class="myWhiteCenter">Ogólne ustawienia konta</h2>
+    <!--<div id="myChangeSettings"> -->
         <div class="container">
-            <table>
+            <table class="table table-hover table-dark">
                 <tr>
                     <td>Imię i nazwisko:</td>
                     <td>Hieronim Dupogrzybek</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>Nazwa użytkownika:</td>
                     <td>hieronimous</td>
-                    <td><button class="myButtonOnlyText btn btn-secondary">noproblem</button></td>
+                    <td class="text-center"><button class=" btn btn-light">Zmień nazwę</button></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
                     <td>hieronim@gmail.com</td>
-                    <td><button class="myButtonOnlyText btn btn-secondary">noproblem</button></td>
+                    <td class="text-center"><button class=" btn btn-light">Zmień email</button></td>
                 </tr>
                 <tr>
                     <td>Hasło:</td>
                     <td>******</td>
-                    <td><button class="myButtonOnlyText btn btn-secondary">noproblem</button></td>
+                    <td class="text-center"><button class=" btn btn-light">Zmień hasło</button></td>
                 </tr>
                 <tr>
                     <td>Telefon:</td>
@@ -34,6 +32,5 @@
                 </tr>
             </table>
         </div>
-    </div>
-
+    <!--</div>-->
 @endsection

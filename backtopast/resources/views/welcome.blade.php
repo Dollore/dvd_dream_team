@@ -2,12 +2,12 @@
 
 <link href="{{ asset('js/package/css/swiper.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/netflix_carousel_styles.css') }}" rel="stylesheet">
+<link href="{{ asset('css/search_bar.css') }}" rel="stylesheet">
 
 @section('content')
-
 </div> <!-- Zamykam myFlex z layouta -->
-
 <h1>BACKTOPAST</h1>
+<h1>Na co masz dziś ochotę?</h1>
 <div class="netflix-slider ">
   <h2 class="myh2">Popularne</h2>
   <div class="swiper-container">

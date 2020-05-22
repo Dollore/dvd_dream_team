@@ -26,10 +26,10 @@
 <body>
     <div class="container-fluid myContainer">
 
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm myNavLink">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm myNavLink">
 
             <!-- Left Side Of Navbar -->
-            <nav class="navbar ">
+            <nav class="navbar">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('img/logo.png') }}" width="30" height="30" alt="">
                 </a>
@@ -39,10 +39,14 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Right Side Of Navbar -->
-            <div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse navbar-right flex-row-reverse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav myUlNav">
+                    <form class="form-inline myNavForm align-self-center">
+                        <li><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></li>
+                        <li><button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button></li>
+                    </form>
                     @guest
                     <li class="nav-item active">
                         <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
@@ -76,6 +80,7 @@
                             </form>
                         </div>
                     </li>
+
                     @endguest
                 </ul>
             </div>
