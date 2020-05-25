@@ -8,19 +8,19 @@
 
 <script>
     const Confirm = {
-    open (options) {
-        options = Object.assign({}, {
-            title: '',
-            message: '',
-            okText: 'OK',
-            cancelText: 'Cancel',
-            onok: function () {
+        open(options) {
+            options = Object.assign({}, {
+                title: '',
+                message: '',
+                okText: 'OK',
+                cancelText: 'Cancel',
+                onok: function () {
 
-            },
-            oncancel: function () {}
-        }, options);
-        
-        const html = `
+                },
+                oncancel: function () { }
+            }, options);
+
+            const html = `
             <div class="confirm">
                 <div class="confirm__window">
                     <div class="confirm__titlebar">
@@ -39,45 +39,45 @@
             </div>
         `;
 
-        const template = document.createElement('template');
-        template.innerHTML = html;
+            const template = document.createElement('template');
+            template.innerHTML = html;
 
-        // Elements
-        const confirmEl = template.content.querySelector('.confirm');
-        const btnClose = template.content.querySelector('.confirm__close');
-        const btnOk = template.content.querySelector('.confirm__button--ok');
-        const btnCancel = template.content.querySelector('.confirm__button--cancel');
+            // Elements
+            const confirmEl = template.content.querySelector('.confirm');
+            const btnClose = template.content.querySelector('.confirm__close');
+            const btnOk = template.content.querySelector('.confirm__button--ok');
+            const btnCancel = template.content.querySelector('.confirm__button--cancel');
 
-        confirmEl.addEventListener('click', e => {
-            if (e.target === confirmEl) {
-                options.oncancel();
-                this._close(confirmEl);
-            }
-        });
+            confirmEl.addEventListener('click', e => {
+                if (e.target === confirmEl) {
+                    options.oncancel();
+                    this._close(confirmEl);
+                }
+            });
 
-        btnOk.addEventListener('click', () => {
-            options.onok();
-            this._close(confirmEl);
-        });
-
-        [btnCancel, btnClose].forEach(el => {
-            el.addEventListener('click', () => {
-                options.oncancel();
+            btnOk.addEventListener('click', () => {
+                options.onok();
                 this._close(confirmEl);
             });
-        });
 
-        document.body.appendChild(template.content);
-    },
+            [btnCancel, btnClose].forEach(el => {
+                el.addEventListener('click', () => {
+                    options.oncancel();
+                    this._close(confirmEl);
+                });
+            });
 
-    _close (confirmEl) {
-        confirmEl.classList.add('confirm--close');
+            document.body.appendChild(template.content);
+        },
 
-        confirmEl.addEventListener('animationend', () => {
-            document.body.removeChild(confirmEl);
-        });
-    }
-};
+        _close(confirmEl) {
+            confirmEl.classList.add('confirm--close');
+
+            confirmEl.addEventListener('animationend', () => {
+                document.body.removeChild(confirmEl);
+            });
+        }
+    };
 </script>
 
 <div class="row d-flex justify-content-md-center ">
@@ -91,10 +91,14 @@
 <div class="netflix-slider ">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/2.jpg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/3.jpg') }}" alt="Movie Title"></div>
-            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/4.jpg') }}" alt="Movie Title"></div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}" alt="Movie Title">
+            </div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/2.jpg') }}" alt="Movie Title">
+            </div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/3.jpg') }}" alt="Movie Title">
+            </div>
+            <div class="swiper-slide"><img src="{{ asset('img/films/'.$film->pathname.'/4.jpg') }}" alt="Movie Title">
+            </div>
         </div>
 
         <div class="swiper-pagination"></div>
@@ -104,63 +108,74 @@
 </div>
 
 @if (!Auth::guest())
-    <div class="col-12 button_film ">
-        <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
-        <script>
-            document.querySelector('#borrowButton').addEventListener('click', () => {
-                Confirm.open({
-                    title: 'Background Change',
-                    message: 'Are you sure you wish the background color?',
-                    onok: () => {
-                        
-                    }
-                })
-            });
-        </script>
-    </div>
+<div class="col-12 button_film ">
+    <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
+    <script>
+        document.querySelector('#borrowButton').addEventListener('click', () => {
+            Confirm.open({
+                title: 'Background Change',
+                message: 'Are you sure you wish the background color?',
+                onok: () => {
+
+                }
+            })
+        });
+    </script>
+</div>
 @endif
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 pl-0">
             <h2>{{ $film->title }}</h2>
         </div>
 
         <div>
-            <div class="col-12">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-0">
                 <span>
                     @foreach ($categories as $cat)
 
-                        {{ $cat->category_name }} &nbsp;
+                    {{ $cat->category_name }} &nbsp;
 
-                        @if (!$loop->last)
-                            / &nbsp;
-                        @endif
+                    @if (!$loop->last)
+                    / &nbsp;
+                    @endif
 
                     @endforeach
-                
+
                 </span>
             </div>
             <br>
-            <div class="col-12">
-                <span>{{ $film->description }}</span>
-            </div>
-            <br>
-            <div class="row ">
-                <div class="col-sm-12 col-md-6">
-                    <span>Reżyser: {{ $director->director_name }} </span>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 pl-0 mb-3">
+                    <span>{{ $film->description }}</span>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    @foreach ($actors as $actor)
 
-                        {{ $actor->firstname }} &nbsp; {{ $actor->lastname }} &nbsp;
-
-                        @if (!$loop->last)
-                            / &nbsp;
-                        @endif
-
-                    @endforeach
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 pl-0">
+                    <table>
+                        <tr>
+                            <td>Reżyser: &nbsp;</td>
+                            <td><span>{{ $director->director_name }}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Aktorzy: &nbsp;</td>
+                            @foreach ($actors as $actor)
+                            
+                            <td>{{ $actor->firstname }} &nbsp; {{ $actor->lastname }} &nbsp;  
+                                @if (!$loop->last)
+                                / &nbsp;
+                                @endif
+                            </td>
+                            
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>Rok premiery: &nbsp;</td>
+                            <td><span>{{ $film->premiere_year }}</span></td>
+                        </tr>
+                    </table>
                 </div>
+                    
             </div>
         </div>
     </div>
@@ -177,7 +192,7 @@
         slidesPerGroup: 1,
         slidesPerGroupSkip: 1,
         updateOnWindowResize: true,
-        grabCursor: true,
+        //grabCursor: true,
         loop: true,
         centeredSlides: true,
         setWrapperSize: true,
@@ -190,6 +205,7 @@
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true,
         },
 
         autoplay: {

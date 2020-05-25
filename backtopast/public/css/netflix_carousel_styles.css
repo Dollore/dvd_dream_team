@@ -32,8 +32,20 @@
   z-index: -1;
 }
 
+.swiper-button-next {
+  text-shadow: -1px 1px 2px #000000;
+}
+
+.swiper-button-prev {
+  text-shadow: 1px 1px 2px #000000;
+}
+
 .swiper-slide a {
   cursor: grab;
+}
+
+.swiper-slide img {
+  height: 340px;
 }
 
 img {
@@ -48,7 +60,7 @@ h1 {
 }
 
 :root {
-  --swiper-theme-color: #fff;
+  --swiper-theme-color: #ffffff;
 }
 
 .netflix-slider {

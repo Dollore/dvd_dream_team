@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('img/logo/favicon_grey.png') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -29,9 +30,9 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm myNavLink">
 
             <!-- Left Side Of Navbar -->
-            <nav class="navbar">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('img/logo.png') }}" width="30" height="30" alt="">
+            <nav class="navbar myNavbar">
+                <a class="navbar-brand" href="{{ route('welcome') }}">
+                    <img src="{{ asset('img/logo/logo.png') }}" width="75" height="75" alt="">
                 </a>
             </nav>
 
