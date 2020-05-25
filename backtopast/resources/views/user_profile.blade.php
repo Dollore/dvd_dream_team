@@ -8,27 +8,22 @@
             <table class="table table-hover table-dark">
                 <tr>
                     <td>Imię i nazwisko:</td>
-                    <td>Hieronim Dupogrzybek</td>
+                    <td>{{ $user->firstname }} &nbsp; {{ $user->lastname }}  </td>
                 </tr>
                 <tr>
                     <td>Nazwa użytkownika:</td>
-                    <td>hieronimous</td>
-                    <td class="text-center"><button class=" btn btn-light">Zmień nazwę</button></td>
+                    <td>{{ $user->username }} </td>
+                    <td class="text-center"><a href="{{ route('updateUsername') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td>hieronim@gmail.com</td>
-                    <td class="text-center"><button class=" btn btn-light">Zmień email</button></td>
+                    <td>{{ $user->email }} </td>
+                    <td class="text-center"><a href="{{ route('updateEmail') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
                 </tr>
                 <tr>
                     <td>Hasło:</td>
                     <td>******</td>
-                    <td class="text-center"><button class=" btn btn-light">Zmień hasło</button></td>
-                </tr>
-                <tr>
-                    <td>Telefon:</td>
-                    <td>666123561</td>
-                    <td></td>
+                    <td class="text-center"><a href="{{ route('updatePassword') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
                 </tr>
             </table>
         </div>

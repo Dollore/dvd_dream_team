@@ -43,16 +43,14 @@
             <div class="collapse navbar-collapse navbar-right flex-row-reverse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav myUlNav">
-                    <form class="form-inline myNavForm align-self-center">
-                        <li><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></li>
-                        <li><button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button></li>
+                    <form class="form-inline myNavForm align-self-center" method="POST" action="{{ route('search') }}">
+                        @csrf
+                        <li><input class="form-control mr-sm-2" type="search" id="search" name="search" placeholder="Szukaj" aria-label="Search"></li>
+                        <li><button class="btn btn-danger my-2 my-sm-0" type="submit">Szukaj</button></li>
                     </form>
                     @guest
                     <li class="nav-item active">
                         <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('profile') }}">{{ __('Profil') }}</a>
                     </li>
                     @if (Route::has('register'))
                     <li class="nav-item active">
@@ -70,6 +68,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="{{ route('profile') }}">
+                                {{ __('Mój profil') }}
+                            </a>
+
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Wyloguj') }}
@@ -78,6 +81,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
+
                         </div>
                     </li>
 

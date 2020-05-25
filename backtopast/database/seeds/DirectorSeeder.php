@@ -14,105 +14,83 @@ class DirectorSeeder extends Seeder
     {
 
         DB::table('director')->insert([
-            'firstname' => 'James',
-            'lastname' => 'Mangold',            
-
+            'director_name' => 'James Mangold',
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Clint',
-            'lastname' => 'Eastwood',            
-
+            'director_name' => 'Clint Eastwood',         
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Doug',
-            'lastname' => 'Liman',   
+            'director_name' => 'Doug Liman',
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Alejandro',
-            'lastname' => 'Gonzalez',   
+            'director_name' => 'Alejandro Gonzalez',  
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Robert',
-            'lastname' => 'Luketic',   
+            'director_name' => 'Robert Luketic',  
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Steven',
-            'lastname' => 'Spielberg',   
+            'director_name' => 'Steven Spielberg',
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'James',
-            'lastname' => 'Cameron',   
+            'director_name' => 'James Cameron', 
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Night',
-            'lastname' => 'Shyamalan',   
+            'director_name' => 'Night Shyamalan',  
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Ridley',
-            'lastname' => 'Scott',   
+            'director_name' => 'Ridley Scott', 
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Peter',
-            'lastname' => 'Weir',   
+            'director_name' => 'Peter Weir',   
         ]);
 
         DB::table('director')->insert([
-            'firstname' => 'Martin',
-            'lastname' => 'Scorsese',
+            'director_name' => 'Martin Scorsese',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Peter',
-            'lastname' => 'Farrelly',
+            'director_name' => 'Peter Farelly',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Bradley',
-            'lastname' => 'Cooper',
+            'director_name' => 'Bradley Cooper',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Nathan',
-            'lastname' => 'Greno',
+            'director_name' => 'Nathan Greno',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Michael',
-            'lastname' => 'Cristofer',
+            'director_name' => 'Michael Cristofer',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Phillip',
-            'lastname' => 'Noyce',
+            'director_name' => 'Phillip Noyce',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Daniel',
-            'lastname' => 'Caruso',
+            'director_name' => 'Daniel Caruso',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Steve',
-            'lastname' => 'Bendelack',
+            'director_name' => 'Steve Bendelack',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Mel',
-            'lastname' => 'Smith',
+            'director_name' => 'Mel Smith',
         ]);
         
         DB::table('director')->insert([
-            'firstname' => 'Gore',
-            'lastname' => 'Verbinski',
+            'director_name' => 'Gore Verbinski',
         ]);
     }
 }

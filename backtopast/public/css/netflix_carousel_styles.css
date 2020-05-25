@@ -9,6 +9,7 @@
 
 .swiper-wrapper {
   height: auto;
+  z-index: -1;
 }
   
 .swiper-slide {
@@ -28,6 +29,7 @@
   align-items: center;
   transition: transform .2s; /* Animation */
   padding: 20px;
+  z-index: -1;
 }
 
 .swiper-slide a {

@@ -15,9 +15,10 @@
 
       @foreach ($popular as $film)
 
-        <div class="swiper-slide"><a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}"
-            alt="Movie Title"></a></div>
-
+        <div class="swiper-slide">
+            <a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}" alt="Movie Title"></a>
+            
+        </div>
       @endforeach
 
     </div>
@@ -33,9 +34,10 @@
     <div class="swiper-wrapper">
         @foreach ($recent as $film)
 
-          <div class="swiper-slide"><a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}"
-                alt="Movie Title"></a></div>
-
+          <div class="swiper-slide">
+              <a href="{{route('film', $film->id_film)}}"><img src="{{ asset('img/films/'.$film->pathname.'/1.jpg') }}" alt="Movie Title"></a>
+          </div>
+            
         @endforeach
     </div>
     <div class="swiper-button-next"></div>
@@ -55,7 +57,6 @@
     spaceBetween: 10,
     slidePerGroup: 5,*/
     updateOnWindowResize: true,
-    grabCursor: true,
     loop: true,
 
     navigation: {

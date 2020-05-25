@@ -11,11 +11,9 @@ class TestController extends Controller
 {
     public function index() {
         
-        /*$myDirector = Film::find(1)->director;
-        $films = Director::find(1)->films;*/
+        $myCat = Category::find(2);
+        $myFilms = $myCat->films;
 
-        //$films = Category::find(1)->films;
-
-        return view('test', ['xd' => 1]);
+        return view('test', ['xd' => $myFilms]);
     }
 }

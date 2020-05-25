@@ -11,7 +11,7 @@ class Director extends Model
     protected $primaryKey = 'id_director';
 
     protected $fillable = [
-        'firstname', 'lastname'
+        'director_name'
     ];
 
     public function films() {

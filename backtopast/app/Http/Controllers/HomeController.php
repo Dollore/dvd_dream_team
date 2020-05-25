@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Film;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $popular = Film::orderBy('borrowed', 'desc')->take(7)->get();
+        $recent = Film::latest()->take(10)->get();
+        return view('welcome', ['popular' => $popular, 'recent' => $recent]);
     }
 }
