@@ -27,10 +27,10 @@
 <body>
     <div class="container-fluid myContainer">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm myNavLink">
+        <nav class="navbar navbar-expand-lg navbar-dark myNavLink myNavbar">
 
             <!-- Left Side Of Navbar -->
-            <nav class="navbar myNavbar">
+            <nav class="navbar myNavbar_img">
                 <a class="navbar-brand" href="{{ route('welcome') }}">
                     <img src="{{ asset('img/logo/logo.png') }}" width="75" height="75" alt="">
                 </a>
@@ -49,10 +49,11 @@
                         <li><input class="form-control mr-sm-2" type="search" id="search" name="search" placeholder="Szukaj" aria-label="Search"></li>
                         <li><button class="btn btn-danger my-2 my-sm-0" type="submit">Szukaj</button></li>
                     </form>
-                    @guest
                     <li class="nav-item active">
                         <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
                     </li>
+                    @guest
+                    
                     @if (Route::has('register'))
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>

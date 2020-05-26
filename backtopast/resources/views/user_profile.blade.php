@@ -5,10 +5,10 @@
 <h2 class="myWhiteCenter">Ogólne ustawienia konta</h2>
     <!--<div id="myChangeSettings"> -->
         <div class="container">
-            <table class="table table-hover table-dark">
+            <table class="table myTable">
                 <tr>
                     <td>Imię i nazwisko:</td>
-                    <td>{{ $user->firstname }} &nbsp; {{ $user->lastname }}  </td>
+                    <td colspan="2">{{ $user->firstname }} &nbsp; {{ $user->lastname }}  </td>
                 </tr>
                 <tr>
                     <td>Nazwa użytkownika:</td>

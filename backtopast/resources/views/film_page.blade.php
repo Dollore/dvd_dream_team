@@ -101,14 +101,14 @@
             </div>
         </div>
 
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination "></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
 </div>
 
 @if (!Auth::guest())
-<div class="col-12 button_film ">
+<div class="col-12 button_film">
     <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
     <script>
         document.querySelector('#borrowButton').addEventListener('click', () => {
@@ -124,8 +124,8 @@
 </div>
 @endif
 
-<div class="container">
-    <div class="row">
+<div class="container mt-3">
+    <div class="row justify-content-center">
         <div class="col-12 pl-0 text-center">
             <h2>{{ $film->title }}</h2>
         </div>

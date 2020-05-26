@@ -29,6 +29,10 @@ body {
     padding-bottom: 0 !important;
 }
 /* Navbar stuff */
+.myNavbar {
+    background-image: linear-gradient(#ffffff1c, #121212);
+}
+
 .myNavLink {
     font-size: 1.5em;
 }
@@ -41,8 +45,12 @@ body {
     margin: 0;
 }
 
-.myNavbar {
+.myNavbar_img {
     padding: 0.1rem 1rem !important;
+}
+
+.nav-link a:hover{
+    color: grey;
 }
 
 .navbar-brand {
