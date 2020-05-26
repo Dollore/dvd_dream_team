@@ -126,12 +126,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 pl-0">
+        <div class="col-12 pl-0 text-center">
             <h2>{{ $film->title }}</h2>
         </div>
 
         <div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-0">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-0 text-center">
                 <span>
                     @foreach ($categories as $cat)
 
@@ -147,30 +147,38 @@
             </div>
             <br>
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 pl-0 mb-3">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-0 mb-3 text-center">
                     <span>{{ $film->description }}</span>
                 </div>
 
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 pl-0">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-0 d-flex justify-content-center">
                     <table>
                         <tr>
-                            <td>Reżyser: &nbsp;</td>
+                            <td class="text-left">Reżyser: &nbsp;</td>
                             <td><span>{{ $director->director_name }}</span></td>
                         </tr>
+
+                        @foreach ($actors as $actor)
+
+                            <tr>
+
+                                <td> 
+                                    @if (($loop->first))
+                                        Aktorzy:
+                                    @endif
+
+                                </td>
+
+                                <td>
+                                    {{ $actor->firstname }} {{ $actor->lastname }} 
+                                </td>
+
+                            </tr>
+
+                        @endforeach
+
                         <tr>
-                            <td>Aktorzy: &nbsp;</td>
-                            @foreach ($actors as $actor)
-                            
-                            <td>{{ $actor->firstname }} &nbsp; {{ $actor->lastname }} &nbsp;  
-                                @if (!$loop->last)
-                                / &nbsp;
-                                @endif
-                            </td>
-                            
-                            @endforeach
-                        </tr>
-                        <tr>
-                            <td>Rok premiery: &nbsp;</td>
+                            <td class="text-left">Rok premiery: &nbsp;</td>
                             <td><span>{{ $film->premiere_year }}</span></td>
                         </tr>
                     </table>
