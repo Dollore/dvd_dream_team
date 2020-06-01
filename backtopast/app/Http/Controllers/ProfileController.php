@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         $user = Auth::user();
+        $notDelete = false;
+        if ($request->has('notDelete')) $notDelete = true;
 
-        return view('user_profile', ['user' => $user]);
+        return view('user_profile', ['user' => $user, 'notDelete' => $notDelete]);
     }
 }

@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 
+Route::get('/filter', 'FilterController@index')->name('filter');
+Route::post('/filter', 'FilterController@filter')->name('filter');
+
 Route::get('/film/{id_film}', 'FilmController@show')->name('film');
 
 Route::get('/profile', 'ProfileController@index')->name('profile')->middleware(['verified', 'auth']);
@@ -24,6 +27,7 @@ Auth::routes([
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware(['verified', 'auth']);
+Route::post('/delete', 'DeleteController@index')->name('delete')->middleware(['verified', 'auth']);
 
 
 Route::get('/updateUsername', 'UpdateController@username')->name('updateUsername')->middleware(['verified', 'auth']);
@@ -37,5 +41,6 @@ Route::post('/editPassword', 'UpdateController@editPassword')->name('editPasswor
 Route::post('/search', 'SearchController@index')->name('search');
 
 Route::post('/borrow', 'BorrowController@store')->name('borrow')->middleware(['verified', 'auth']);
+Route::get('/history', 'HistoryController@index')->name('history')->middleware(['verified', 'auth']);
 
 Route::get('/test', 'TestController@index')->name('test');

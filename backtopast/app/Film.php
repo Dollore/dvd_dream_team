@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Category;
 use App\Actor;
+use App\Borrowing;
 
 class Film extends Model
 {
@@ -27,5 +28,9 @@ class Film extends Model
 
     public function actors() {
         return $this->belongsToMany('App\Actor', 'actor_film', 'film_id', 'actor_id');
+    }
+
+    public function borrowings() {
+        return $this->hasMany('App\Borrowing', 'film_id', 'id_film');
     }
 }

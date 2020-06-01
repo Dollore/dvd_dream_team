@@ -52,6 +52,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/">{{ __('Strona główna') }}</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('filter') }}">{{ __('Filtruj') }}</a>
+                    </li>
                     @guest
                     
                     @if (Route::has('register'))
@@ -73,6 +76,10 @@
 
                             <a class="dropdown-item" href="{{ route('profile') }}">
                                 {{ __('Mój profil') }}
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('history') }}">
+                                {{ __('Historia wypożyczeń') }}
                             </a>
 
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

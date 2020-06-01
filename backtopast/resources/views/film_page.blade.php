@@ -31,7 +31,7 @@
                     <div class="confirm__buttons">
                         <form method="POST" action="{{ route('borrow') }}">
                             @csrf
-                            <button type="submit" class="confirm__button confirm__button--ok confirm__button--fill">${options.okText} </button>
+                            <button type="submit" name="film_id" value="{{ $film->id_film }}" class="confirm__button confirm__button--ok confirm__button--fill">${options.okText} </button>
                         </form>
                         <button class="confirm__button confirm__button--cancel">${options.cancelText}</button>
                     </div>
@@ -108,20 +108,24 @@
 </div>
 
 @if (!Auth::guest())
-<div class="col-12 button_film">
-    <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
-    <script>
-        document.querySelector('#borrowButton').addEventListener('click', () => {
-            Confirm.open({
-                title: 'Background Change',
-                message: 'Are you sure you wish the background color?',
-                onok: () => {
+    <div class="col-12 button_film">
+        <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
+        <script>
+            document.querySelector('#borrowButton').addEventListener('click', () => {
+                Confirm.open({
+                    title: 'Background Change',
+                    message: 'Are you sure you wish the background color?',
+                    onok: () => {
 
-                }
-            })
-        });
-    </script>
-</div>
+                    }
+                })
+            });
+        </script>
+    </div>
+@else
+    
+
+    
 @endif
 
 <div class="container mt-3">
