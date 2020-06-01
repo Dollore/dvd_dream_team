@@ -23,11 +23,16 @@ footer h3 {
     padding: 80px 0;
 }
 
-.segment-one h3 {
-    font-family: Courgette;
+.segment-one h2 {
+    font-family: Poppins;
     color: #fff;
-    letter-spacing: 3px;
-    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.segment-one h2:before {
+    content: '|';
+    color: #c00;
+    padding-right: 10px;
 }
 
 .segment-two h2 {

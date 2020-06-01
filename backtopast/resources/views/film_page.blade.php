@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/film_page_styles.css') }}">
 <link href="{{ asset('js/package/css/swiper.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/film_carousel_styles.css') }}" rel="stylesheet">
 <link href="{{ asset('css/confirm_popup.css') }}" rel="stylesheet">
@@ -83,7 +82,7 @@
 <div class="row d-flex justify-content-md-center ">
 
     <div class="myTitle">
-        <h1> {{ $film->title }}</h1>
+        <h1>{{ $film->title }}</h1>
     </div>
 </div> <!-- Zamykam myFlex z layouta -->
 </div>
@@ -107,8 +106,10 @@
     </div>
 </div>
 
+<div class="container myfont-16 mt-3">
+    
 @if (!Auth::guest())
-    <div class="col-12 button_film">
+    <div class="col-12 button_film mb-3">
         <button id="borrowButton" type="button" class="btn mySubmitButton btn-lg myBorrowButton">Wypożycz</button>
         <script>
             document.querySelector('#borrowButton').addEventListener('click', () => {
@@ -124,12 +125,11 @@
     </div>
 @else
     
-
+    <div class="col-12 text-center myfont-16 mb-3"><a href="{{ route('login') }}">Zaloguj się</a>, aby wypożyczyć film.</div>
     
 @endif
 
-<div class="container mt-3">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pt-3">
         <div class="col-12 pl-0 text-center">
             <h2>{{ $film->title }}</h2>
         </div>

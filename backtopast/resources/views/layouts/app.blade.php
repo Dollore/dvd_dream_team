@@ -46,7 +46,7 @@
                 <ul class="navbar-nav myUlNav">
                     <form class="form-inline myNavForm align-self-center" method="POST" action="{{ route('search') }}">
                         @csrf
-                        <li><input class="form-control mr-sm-2" type="search" id="search" name="search" placeholder="Szukaj" aria-label="Search"></li>
+                        <li><input class="form-control mr-sm-2" type="search" id="search" name="search" placeholder="Szukaj" aria-label="Search" required></li>
                         <li><button class="btn btn-danger my-2 my-sm-0" type="submit">Szukaj</button></li>
                     </form>
                     <li class="nav-item active">
@@ -108,7 +108,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
-                            <h3>BackToPast</h3>
+                            <h2>BackToPast</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem autem eveniet at
                                 que quo assumenda consequatur natus ullam facere soluta cupiditate aut et, dicta cumque
                                 repellat, quis esse debitis. Quibusdam, harum.

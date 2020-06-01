@@ -8,7 +8,7 @@
 </div> <!-- Zamykam myFlex z layouta -->
 
 @if ($foundFilms->isEmpty()) 
-    <h2 class="myh2">Niestety, nie znaleziono żadnych filmów. Spróbuj ponownie</h2>
+    <h2 class="myh2 text-center">Niestety, nie znaleziono żadnych filmów. Spróbuj ponownie</h2>
 @else
     <div class="netflix-slider ">
     <h2 class="myh2">Wyszukane dla Ciebie</h2>

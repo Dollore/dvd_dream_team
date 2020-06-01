@@ -12,9 +12,30 @@ body {
     flex-direction: column;
     align-content: space-between;
 }
+.myfont-16 {
+    font-size: 16px;
+}
 
 .myFlex {
     flex-grow: 1;
+}
+
+/* Myfilm_page xD */
+.myTitle {
+ text-align: center;
+}
+
+.myTitle > h1 {
+  padding-left: 15px;
+}
+
+.myBorrowButton {
+	padding: 0.5rem 4rem;
+}
+
+.button_film {
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 /* Zmiany w bootstrap*/
@@ -29,6 +50,10 @@ body {
     padding-bottom: 0 !important;
 }
 /* Navbar stuff */
+.dropdown-item{
+   font-size: 16px;
+}
+
 .myNavbar {
     background-image: linear-gradient(#ffffff1c, #121212);
 }
@@ -77,19 +102,19 @@ body {
 
 .myForm a{
     text-decoration: none;
-    color:#ff6600;
+    color:white;
     font-size: 1em;
     text-align: center;
 }
 
 .myForm a:hover {
     text-decoration: none;
-    color:#ff9100;
+    color:honeydew;
 }
 
 .myForm input {
     background-color: #111;
-    border: 1px solid #ff6600;
+    border: 1px solid white;
     border-radius: 10px;
     color: #DCDCDC;
     font-size: 1.2rem;
@@ -101,7 +126,7 @@ body {
     color: #DCDCDC;
     border: none;
     box-shadow: none;
-    border: 3px solid #ff6600;
+    border: 3px solid honeydew;
 }
 
 .myFormHeader {
@@ -133,7 +158,7 @@ body {
 
 .myResendButton {
     text-decoration: none;
-    color:#ff6600;
+    color:white;
     font-size: 1em;
     text-align: center;   
 }

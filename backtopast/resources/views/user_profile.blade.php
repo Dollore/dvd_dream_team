@@ -77,7 +77,7 @@
 
 <h2 class="myWhiteCenter">Ogólne ustawienia konta</h2>
         <div class="container">
-            <table class="table myTable">
+            <table class="table myTable myfont-16">
                 <tr>
                     <td>Imię i nazwisko:</td>
                     <td colspan="2">{{ $user->firstname }} &nbsp; {{ $user->lastname }}  </td>
@@ -85,17 +85,17 @@
                 <tr>
                     <td>Nazwa użytkownika:</td>
                     <td>{{ $user->username }} </td>
-                    <td class="text-center"><a href="{{ route('updateUsername') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
+                    <td class="text-center"><a href="{{ route('updateUsername') }}"> <button class=" btn btn-light ">Zmień</button> </a> </td>
                 </tr>
                 <tr>
                     <td>Email:</td>
                     <td>{{ $user->email }} </td>
-                    <td class="text-center"><a href="{{ route('updateEmail') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
+                    <td class="text-center"><a href="{{ route('updateEmail') }}"> <button class=" btn btn-light ">Zmień</button> </a> </td>
                 </tr>
                 <tr>
                     <td>Hasło:</td>
                     <td>******</td>
-                    <td class="text-center"><a href="{{ route('updatePassword') }}"> <button class=" btn btn-light">Zmień</button> </a> </td>
+                    <td class="text-center"><a href="{{ route('updatePassword') }}"> <button class=" btn btn-light ">Zmień</button> </a> </td>
                 </tr>
             </table>
 
@@ -111,7 +111,7 @@
         </script>
 
         @if ($notDelete)
-            <span style="color:red;">Nie można usunąć konta, ponieważ nie zwróciłeś wszystkich filmów</span>
+            <div class="col-12 pt-3 text-danger myfont-16">Nie można usunąć konta, ponieważ nie zwróciłeś wszystkich filmów</div>
         @endif
         </div>
 
