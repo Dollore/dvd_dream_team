@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 25 Maj 2020, 13:21
+-- Czas generowania: 01 Cze 2020, 19:33
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.2.30
 
@@ -174,6 +174,35 @@ INSERT INTO `actor_film` (`id_actor_film`, `actor_id`, `film_id`, `created_at`, 
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `borrowing`
+--
+
+CREATE TABLE `borrowing` (
+  `id_borrowing` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `film_id` int(11) NOT NULL,
+  `returned` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `borrowing`
+--
+
+INSERT INTO `borrowing` (`id_borrowing`, `created_at`, `updated_at`, `user_id`, `film_id`, `returned`) VALUES
+(4, '2020-06-01 12:24:40', NULL, 1, 7, 0),
+(5, '2018-06-01 12:41:31', NULL, 1, 20, 1),
+(6, '2020-06-01 12:41:50', NULL, 1, 12, 1),
+(7, '2019-06-01 14:24:31', NULL, 1, 17, 0),
+(8, '2020-06-01 14:25:26', NULL, 1, 4, 0),
+(9, '2020-06-01 14:28:31', NULL, 1, 8, 0),
+(10, '2020-06-01 15:09:44', NULL, 2, 20, 1),
+(11, '2020-06-01 17:15:25', NULL, 3, 5, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `category`
 --
 
@@ -322,26 +351,26 @@ CREATE TABLE `film` (
 --
 
 INSERT INTO `film` (`id_film`, `title`, `pathname`, `premiere_year`, `description`, `borrowed`, `director_id`, `created_at`, `updated_at`) VALUES
-(1, 'Przerwana lekcja muzyki', 'przerwana_lekcja_muzyki', 1999, 'Susanna poznaje Lisę w zakładzie psychiatrycznym. Od niej uczy się akceptacji siebie.', 0, 1, '2020-05-23 13:24:43', NULL),
-(2, 'Oszukana', 'oszukana', 2008, 'Los Angeles, 1928 rok. Christine wychodzi do pracy, zostawiając kilkuletniego syna w domu. Gdy wraca, dziecka nie ma.', 0, 2, '2020-05-23 13:24:43', NULL),
-(3, 'Mr. & Mrs Smith', 'mr_&_mrs_Smith', 2005, 'Para płatnych zabójców pracujących dla dwóch tajnych agencji wiedzie monotonne małżeńskie życie. Niespodziewanie dostają zlecenie na siebie nawzajem.', 0, 3, '2020-05-23 13:24:43', NULL),
-(4, 'Zjawa', 'zjawa', 2015, 'Hugh Glass szuka zemsty na ludziach, którzy zostawili go poważnie rannego po ataku niedźwiedzia.', 0, 4, '2020-05-23 13:24:43', NULL),
-(5, '21', '21', 2008, 'Wybitnie zdolni studenci prestiżowej uczelni dzięki wiedzy z zakresu matematyki wygrywają olbrzymie sumy w blackjacka. Tymczasem właściciele kasyn zabezpieczają się przed kolejnymi stratami.', 0, 5, '2020-05-23 13:24:43', NULL),
-(6, 'Złap mnie, jeśli potrafisz', 'zlap_mnie_jesli_potrafisz', 2002, 'Oparta na faktach historia młodego fałszerza, który w latach 60., podając się za pilotów, lekarzy i profesorów, wyłudził z banków ponad 2,5 mln dolarów.', 0, 6, '2020-05-23 13:24:43', NULL),
-(7, 'Titanic', 'titanic', 1997, 'Rok 1912, brytyjski statek Titanic wyrusza w swój dziewiczy rejs do USA. Na pokładzie emigrant Jack przypadkowo spotyka arystokratkę Rose.', 10, 7, '2020-05-23 13:24:43', NULL),
-(8, 'Split', 'split', 2016, 'Mężczyzna o mnogiej osobowości porywa trzy nastolatki. Okazuje się, że jedna z jaźni zaczyna dominować nad innymi.', 0, 8, '2020-05-23 13:24:43', NULL),
-(9, 'Marsjanin', 'marsjanin', 2015, 'Po nieudanej ekspedycji Mark zostaje sam na Marsie. Mimo znikomych zapasów oraz zerwanej łączności z dowództwem mężczyzna stara się przetrwać w trudnych warunkach.', 0, 9, '2020-05-23 13:24:43', NULL),
-(10, 'Stowarzyszenie Umarłych Poetów', 'stowarzyszenie_umarlych_poetow', 1989, 'Charyzmatyczny nauczyciel języka angielskiego w konserwatywnym liceum stara się wpoić uczniom miłość do poezji i ideę \"carpe diem\".', 5, 10, '2020-05-23 13:24:43', NULL),
-(11, 'Wyspa tajemnic', 'wyspa_tajemnic', 2010, 'Szeryf federalny Daniels stara się dowiedzieć, jakim sposobem z zamkniętej celi w pilnie strzeżonym szpitalu dla chorych psychicznie przestępców zniknęła pacjentka.', 98, 11, '2020-05-23 13:24:43', NULL),
-(12, 'Green Book', 'green_book', 2018, 'Drobny cwaniaczek z Bronksu zostaje szoferem ekstrawaganckiego muzyka z wyższych sfer i razem wyruszają na wielotygodniowe tournée.', 26, 12, '2020-05-23 13:24:43', NULL),
-(13, 'Narodziny gwiazdy', 'narodziny_gwiazdy', 2018, 'Płomienny romans między dogasającą gwiazdą muzyki country a nieznaną piosenkarką zmienia ich życie na zawsze.', 14, 13, '2020-05-23 13:24:43', NULL),
-(14, 'Zaplątani', 'zaplatani', 2010, 'Żyjąca na odludziu Roszpunka, której włosy mają magiczną moc, marzy, by poznać świat. Jej przepustką do wolności jest czarujący łotrzyk Flynn.', 7, 14, '2020-05-23 13:24:43', NULL),
-(15, 'Gia', 'gia', 1998, 'Burzliwe życie oraz kariera Gii Carangi, niezależnej i pięknej kobiety, która stała się jedną z legend świata mody.', 22, 15, '2020-05-23 13:24:43', NULL),
-(16, 'Kolekcjoner kości', 'kolekcjoner_kosci', 1999, 'Ekranizacja powieści Jefferego Deavera. Sparaliżowany i pogrążony w depresji detektyw Lincoln Rhyme zostaje poproszony o pomoc w schwytaniu seryjnego mordercy.', 18, 16, '2020-05-23 13:24:43', NULL),
-(17, 'Złodziej życia', 'zlodziej_zycia', 2004, 'Agentka FBI pomaga kanadyjskiej policji w ujęciu seryjnego mordercy.', 53, 17, '2020-05-23 13:24:43', NULL),
-(18, 'Wakacje Jasia Fasoli', 'wakacje_jasia_fasoli', 2007, 'Jaś Fasola wygrywa wycieczkę i wyrusza w pełną przygód podróż do Cannes.', 102, 18, '2020-05-23 13:24:43', NULL),
-(19, 'Jaś Fasola: Nadciąga totalny kataklizm', 'jas_fasola_nadciaga_totalny_kataklizm', 1997, 'Nieudolny Jaś Fasola przybywa do Ameryki, gdzie dostaje odpowiedzialne zadanie opieki nad cennym obrazem zakupionym przez muzeum w Los Angeles.', 65, 19, '2020-05-23 13:24:43', NULL),
-(20, 'Piraci z Karaibów: Klątwa Czarnej Perły ', 'piraci_z_karaibow_klatwa_czarnej_perly', 2003, 'Kowal Will Turner sprzymierza się z kapitanem Jackiem Sparrowem, by odzyskać swoją miłość - porwaną córkę gubernatora.', 48, 20, '2020-05-23 13:24:43', NULL);
+(1, 'Przerwana lekcja muzyki', 'przerwana_lekcja_muzyki', 1999, 'Susanna poznaje Lisę w zakładzie psychiatrycznym. Od niej uczy się akceptacji siebie.', 1, 1, '2020-06-01 12:10:23', NULL),
+(2, 'Oszukana', 'oszukana', 2008, 'Los Angeles, 1928 rok. Christine wychodzi do pracy, zostawiając kilkuletniego syna w domu. Gdy wraca, dziecka nie ma.', 1, 2, '2020-06-01 12:10:23', NULL),
+(3, 'Mr. & Mrs Smith', 'mr_&_mrs_Smith', 2005, 'Para płatnych zabójców pracujących dla dwóch tajnych agencji wiedzie monotonne małżeńskie życie. Niespodziewanie dostają zlecenie na siebie nawzajem.', 1, 3, '2020-06-01 12:10:23', NULL),
+(4, 'Zjawa', 'zjawa', 2015, 'Hugh Glass szuka zemsty na ludziach, którzy zostawili go poważnie rannego po ataku niedźwiedzia.', 2, 4, '2020-06-01 12:10:23', NULL),
+(5, '21', '21', 2008, 'Wybitnie zdolni studenci prestiżowej uczelni dzięki wiedzy z zakresu matematyki wygrywają olbrzymie sumy w blackjacka. Tymczasem właściciele kasyn zabezpieczają się przed kolejnymi stratami.', 2, 5, '2020-06-01 12:10:23', NULL),
+(6, 'Złap mnie, jeśli potrafisz', 'zlap_mnie_jesli_potrafisz', 2002, 'Oparta na faktach historia młodego fałszerza, który w latach 60., podając się za pilotów, lekarzy i profesorów, wyłudził z banków ponad 2,5 mln dolarów.', 1, 6, '2020-06-01 12:10:23', NULL),
+(7, 'Titanic', 'titanic', 1997, 'Rok 1912, brytyjski statek Titanic wyrusza w swój dziewiczy rejs do USA. Na pokładzie emigrant Jack przypadkowo spotyka arystokratkę Rose.', 13, 7, '2020-06-01 12:10:23', NULL),
+(8, 'Split', 'split', 2016, 'Mężczyzna o mnogiej osobowości porywa trzy nastolatki. Okazuje się, że jedna z jaźni zaczyna dominować nad innymi.', 2, 8, '2020-06-01 12:10:23', NULL),
+(9, 'Marsjanin', 'marsjanin', 2015, 'Po nieudanej ekspedycji Mark zostaje sam na Marsie. Mimo znikomych zapasów oraz zerwanej łączności z dowództwem mężczyzna stara się przetrwać w trudnych warunkach.', 1, 9, '2020-06-01 12:10:23', NULL),
+(10, 'Stowarzyszenie Umarłych Poetów', 'stowarzyszenie_umarlych_poetow', 1989, 'Charyzmatyczny nauczyciel języka angielskiego w konserwatywnym liceum stara się wpoić uczniom miłość do poezji i ideę \"carpe diem\".', 6, 10, '2020-06-01 12:10:23', NULL),
+(11, 'Wyspa tajemnic', 'wyspa_tajemnic', 2010, 'Szeryf federalny Daniels stara się dowiedzieć, jakim sposobem z zamkniętej celi w pilnie strzeżonym szpitalu dla chorych psychicznie przestępców zniknęła pacjentka.', 99, 11, '2020-06-01 12:10:23', NULL),
+(12, 'Green Book', 'green_book', 2018, 'Drobny cwaniaczek z Bronksu zostaje szoferem ekstrawaganckiego muzyka z wyższych sfer i razem wyruszają na wielotygodniowe tournée.', 28, 12, '2020-06-01 12:10:23', NULL),
+(13, 'Narodziny gwiazdy', 'narodziny_gwiazdy', 2018, 'Płomienny romans między dogasającą gwiazdą muzyki country a nieznaną piosenkarką zmienia ich życie na zawsze.', 15, 13, '2020-06-01 12:10:23', NULL),
+(14, 'Zaplątani', 'zaplatani', 2010, 'Żyjąca na odludziu Roszpunka, której włosy mają magiczną moc, marzy, by poznać świat. Jej przepustką do wolności jest czarujący łotrzyk Flynn.', 8, 14, '2020-06-01 12:10:23', NULL),
+(15, 'Gia', 'gia', 1998, 'Burzliwe życie oraz kariera Gii Carangi, niezależnej i pięknej kobiety, która stała się jedną z legend świata mody.', 23, 15, '2020-06-01 12:10:23', NULL),
+(16, 'Kolekcjoner kości', 'kolekcjoner_kosci', 1999, 'Ekranizacja powieści Jefferego Deavera. Sparaliżowany i pogrążony w depresji detektyw Lincoln Rhyme zostaje poproszony o pomoc w schwytaniu seryjnego mordercy.', 19, 16, '2020-06-01 12:10:23', NULL),
+(17, 'Złodziej życia', 'zlodziej_zycia', 2004, 'Agentka FBI pomaga kanadyjskiej policji w ujęciu seryjnego mordercy.', 55, 17, '2020-06-01 12:10:23', NULL),
+(18, 'Wakacje Jasia Fasoli', 'wakacje_jasia_fasoli', 2007, 'Jaś Fasola wygrywa wycieczkę i wyrusza w pełną przygód podróż do Cannes.', 103, 18, '2020-06-01 12:10:23', NULL),
+(19, 'Jaś Fasola: Nadciąga totalny kataklizm', 'jas_fasola_nadciaga_totalny_kataklizm', 1997, 'Nieudolny Jaś Fasola przybywa do Ameryki, gdzie dostaje odpowiedzialne zadanie opieki nad cennym obrazem zakupionym przez muzeum w Los Angeles.', 66, 19, '2020-06-01 12:10:23', NULL),
+(20, 'Piraci z Karaibów: Klątwa Czarnej Perły ', 'piraci_z_karaibow_klatwa_czarnej_perly', 2003, 'Kowal Will Turner sprzymierza się z kapitanem Jackiem Sparrowem, by odzyskać swoją miłość - porwaną córkę gubernatora.', 51, 20, '2020-06-01 12:10:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -360,14 +389,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(73, '2014_10_12_000000_create_users_table', 1),
-(74, '2014_10_12_100000_create_password_resets_table', 1),
-(75, '2020_05_19_184456_create_actor_table', 1),
-(76, '2020_05_19_185408_create_director_table', 1),
-(77, '2020_05_19_185844_create_category_table', 1),
-(78, '2020_05_19_190534_create_film_table', 1),
-(79, '2020_05_20_102640_create_actor_film_table', 1),
-(80, '2020_05_20_103340_create_category_film_table', 1);
+(101, '2014_10_12_000000_create_users_table', 1),
+(102, '2014_10_12_100000_create_password_resets_table', 1),
+(103, '2020_05_19_184456_create_actor_table', 1),
+(104, '2020_05_19_185408_create_director_table', 1),
+(105, '2020_05_19_185844_create_category_table', 1),
+(106, '2020_05_19_190534_create_film_table', 1),
+(107, '2020_05_20_102640_create_actor_film_table', 1),
+(108, '2020_05_20_103340_create_category_film_table', 1),
+(109, '2020_06_01_095943_create_borrowing_table', 1);
 
 -- --------------------------------------------------------
 
@@ -405,7 +435,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `email`, `email_verified_at`, `password`, `firstname`, `lastname`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'rapast', 'rafalstarypan@gmail.com', '2020-05-25 08:22:26', '$2y$10$YLfMHMSZ1u/k.tmB9fhBJeMJe/.CRMdl5CT0HwRbF6Eaf/LRgeeMy', 'Rafał', 'Starypan', NULL, '2020-05-23 15:35:54', '2020-05-25 08:22:26');
+(1, 'rapast', 'rafalstarypan@gmail.com', '2020-06-01 10:11:25', '$2y$10$9teZvGgk3MaAYuc6oimm0uYkTNwJ.BDEPhwGbZtPygFCEAxKWPm5y', 'Rafał', 'Starypan', NULL, '2020-06-01 10:11:11', '2020-06-01 10:11:25');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -422,6 +452,12 @@ ALTER TABLE `actor`
 --
 ALTER TABLE `actor_film`
   ADD PRIMARY KEY (`id_actor_film`);
+
+--
+-- Indeksy dla tabeli `borrowing`
+--
+ALTER TABLE `borrowing`
+  ADD PRIMARY KEY (`id_borrowing`);
 
 --
 -- Indeksy dla tabeli `category`
@@ -485,6 +521,12 @@ ALTER TABLE `actor_film`
   MODIFY `id_actor_film` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
+-- AUTO_INCREMENT dla tabeli `borrowing`
+--
+ALTER TABLE `borrowing`
+  MODIFY `id_borrowing` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT dla tabeli `category`
 --
 ALTER TABLE `category`
@@ -494,7 +536,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT dla tabeli `category_film`
 --
 ALTER TABLE `category_film`
-  MODIFY `id_category_film` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_category_film` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT dla tabeli `director`
@@ -512,13 +554,13 @@ ALTER TABLE `film`
 -- AUTO_INCREMENT dla tabeli `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
