@@ -10,7 +10,9 @@ class ProfileController extends Controller
     public function index(Request $request) {
         $user = Auth::user();
         $notDelete = false;
-        if ($request->has('notDelete')) $notDelete = true;
+        if ($request->session()->has('notDelete')) {
+            $notDelete = $request->session()->pull('notDelete');
+        }
 
         return view('user_profile', ['user' => $user, 'notDelete' => $notDelete]);
     }

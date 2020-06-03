@@ -23,6 +23,7 @@
 
 .confirm--close {
     animation-name: confirm---close;
+    z-index: -1 !important;
 }
 
 .confirm__window {

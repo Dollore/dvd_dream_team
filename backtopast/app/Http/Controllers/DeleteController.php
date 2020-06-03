@@ -10,14 +10,15 @@ use App\Borrowing;
 
 class DeleteController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         $myId = Auth::user()->id_user;
 
         $notReturned = Borrowing::where('user_id', $myId)
             ->where('returned', false)->get();
 
         if (!$notReturned->isEmpty()) {
-            return redirect()->route('profile', ['notDelete' => true]);
+            $request->session()->put('notDelete', true);
+            return redirect()->route('profile');
         }
 
         $me = User::findOrFail($myId);

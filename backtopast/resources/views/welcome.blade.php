@@ -3,11 +3,38 @@
 <link href="{{ asset('js/package/css/swiper.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/netflix_carousel_styles.css') }}" rel="stylesheet">
 <link href="{{ asset('css/search_bar.css') }}" rel="stylesheet">
+<link href="{{ asset('css/confirm_popup.css') }}" rel="stylesheet">
+
+<script>
+
+      function justClose() {
+          const confirmEl = document.querySelector('.confirm');
+          confirmEl.classList.add('confirm--close');
+      }
+      
+</script>
 
 @section('content')
 </div> <!-- Zamykam myFlex z layouta -->
 <h1>BACKTOPAST</h1>
 <h1>Na co masz dziś ochotę?</h1>
+
+@if (Session::pull('showPopup'))
+
+    <div class="confirm">
+        <div class="confirm__window">
+            <div class="confirm__titlebar">
+                <span class="confirm__title">Przekroczony termin</span>
+            </div>
+            <div class="confirm__content">Nie oddałaś/eś filmów w terminie. Zrób to jak najszybciej!</div>
+            <div class="confirm__buttons">
+                <button type="submit" onclick="justClose()" class="confirm__button confirm__button--ok confirm__button--fill">OK</button>
+            </div>
+        </div>
+    </div>
+
+@endif
+
 <div class="netflix-slider ">
   <h2 class="myh2">Popularne</h2>
   <div class="swiper-container">
