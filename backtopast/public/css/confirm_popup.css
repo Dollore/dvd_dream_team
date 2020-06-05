@@ -61,7 +61,7 @@
 
 .confirm__title {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 16px;
 }
 
 .confirm__close {
@@ -96,7 +96,7 @@
     background: #ffffff;
     color: #009879;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     margin-left: 0.6em;
     cursor: pointer;

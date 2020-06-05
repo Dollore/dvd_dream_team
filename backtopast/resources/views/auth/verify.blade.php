@@ -12,16 +12,16 @@
                 <div class="card-body myForm">
                     @if (session('resent'))
                     <div class="alert alert-success" role="alert">
-                        {{ __('A fresh verification link has been sent to your email address.') }}
+                        {{ __('Nowa wiadomość z weryfikacją adresu email została wysłana.') }}
                     </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
+                    {{ __('Na Twój adres email została wysłana wiadomość z prośbą o potwierdzenie rejestracji. ') }}
+                    {{ __('Jeżeli jej nie otrzymałeś') }},
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <button type="submit"
-                            class="btn btn-link p-0 m-0 align-baseline myResendButton">{{ __('click here to request another') }}</button>.
+                            class="btn btn-link p-0 m-0 align-baseline myResendButton">{{ __('kliknij tutaj, aby wysłać ją ponownie') }}</button>.
                     </form>
                 </div>
             </div>

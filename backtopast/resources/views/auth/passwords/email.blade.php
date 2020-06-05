@@ -12,7 +12,7 @@
                 <div class="card-body myForm">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                        {{ 'Wysłano maila z linkiem resetującym hasło.'  }}
                     </div>
                     @endif
 

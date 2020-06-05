@@ -114,8 +114,8 @@
         <script>
             document.querySelector('#borrowButton').addEventListener('click', () => {
                 Confirm.open({
-                    title: 'Background Change',
-                    message: 'Are you sure you wish the background color?',
+                    title: 'Wypożycz film',
+                    message: 'Czy na pewno chcesz wypożyczyć ten film?',
                     onok: () => {
 
                     }
