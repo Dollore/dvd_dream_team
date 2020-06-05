@@ -109,9 +109,9 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
                             <h2>BackToPast</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem autem eveniet at
-                                que quo assumenda consequatur natus ullam facere soluta cupiditate aut et, dicta cumque
-                                repellat, quis esse debitis. Quibusdam, harum.
+                            <p>Od 1989 roku posiadamy najciekawszą i największą bazę filmów, którą stale wzbogacamy o 
+                            kolejne tytuły. Praca w naszym zespole jest dla nas nie tylko obowiązkiem, ale fantastyczną 
+                            pasją, którą wciąż pielęgnujemy, łącząc naszą energię i entuzjazm.
                             </p>
 
                         </div>
@@ -129,11 +129,9 @@
 
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-three sm-mb-30">
                             <h2>Follow Us</h2>
-                            <p>Please Follow us on our Social Media Profile in order to keep updated. Lorem ipsum dolor
-                                sit amet consectetur,
-                                adipisicing elit. Vitae earum, accusantium officiis labore reiciendis necessitatibus
-                                quam voluptas illo nemo id natus ducimus corporis deserunt, velit quia vero alias
-                                voluptatum deleniti.
+                            <p>Śledź nas na naszych profilach w mediach społecznościowych, aby być na bieżąco. Pojawiają 
+                            się tam informacje o nowościach, informacje o filmach i zapowiedzi. Prowadzimy również konkursy,
+                            w których możecie wygrać wspaniałe nagrody.
                             </p>
                         
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -143,10 +141,8 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-four sm-mb-30">
                             <h2>Our Newsletter</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis atque
-                                nisi quidem
-                                vero expedita ullam veniam excepturi ipsam veritatis alias temporibus iure quia corrupti
-                                nihil, voluptatum voluptatibus amet quae.
+                            <p>Dołącz do 880 000 osób i bądź na bieżąco z nowościami, osobistymi rekomendacjami i ofertami specjalnymi.
+                             Podaj swój adres email poniżej i ciesz się już dziś ciekawymi ofertami od naszego zespołu. 
                             </p>
                             <form action="">
                                 <input type="email">
