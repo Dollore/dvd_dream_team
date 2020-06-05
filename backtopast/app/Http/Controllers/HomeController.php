@@ -27,8 +27,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $popular = Film::orderBy('borrowed', 'desc')->take(7)->get();
-        $recent = Film::latest()->take(10)->get();
+        $popular = Film::orderBy('borrowed', 'desc')->take(14)->get();
+        $recent = Film::latest()->take(14)->get();
 
         $myId = Auth::user()->id_user;
         $date = Carbon::today()->subDays(7);

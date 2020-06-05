@@ -117,18 +117,18 @@
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
-                            <h2>Useful links</h2>
+                            <h2>Linki</h2>
                             <ul>
-                                <li><a href="#">Event</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Hosting</a></li>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Konkursy</a></li>
+                                <li><a href="#">Wsparcie</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Kariera</a></li>
+                                <li><a href="#">Ciasteczka</a></li>
                             </ul>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-three sm-mb-30">
-                            <h2>Follow Us</h2>
+                            <h2>Śledź nas</h2>
                             <p>Śledź nas na naszych profilach w mediach społecznościowych, aby być na bieżąco. Pojawiają 
                             się tam informacje o nowościach, informacje o filmach i zapowiedzi. Prowadzimy również konkursy,
                             w których możecie wygrać wspaniałe nagrody.
@@ -136,11 +136,11 @@
                         
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-pinterest"></i></a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 segment-four sm-mb-30">
-                            <h2>Our Newsletter</h2>
+                            <h2>Nasz Newsletter</h2>
                             <p>Dołącz do 880 000 osób i bądź na bieżąco z nowościami, osobistymi rekomendacjami i ofertami specjalnymi.
                              Podaj swój adres email poniżej i ciesz się już dziś ciekawymi ofertami od naszego zespołu. 
                             </p>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <p class="footer-bottom-text">All Right reserved by &copy;BackToPast.2020</p>
+            <p class="footer-bottom-text">Wszelkie prawa zastrzeżone &copy;BackToPast.2020</p>
         </footer>
     </div>
 </body>

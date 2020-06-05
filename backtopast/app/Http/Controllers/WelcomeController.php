@@ -9,8 +9,8 @@ class WelcomeController extends Controller
 {
     public function index() {
 
-        $popular = Film::orderBy('borrowed', 'desc')->take(7)->get();
-        $recent = Film::latest()->take(10)->get();
+        $popular = Film::orderBy('borrowed', 'desc')->take(14)->get();
+        $recent = Film::latest()->take(14)->get();
         return view('welcome', ['popular' => $popular, 'recent' => $recent]);
     }
 }

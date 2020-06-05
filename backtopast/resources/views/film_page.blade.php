@@ -125,7 +125,7 @@
     </div>
 @else
     
-    <div class="col-12 text-center myfont-16 mb-3"><a href="{{ route('login') }}">Zaloguj się</a>, aby wypożyczyć film.</div>
+    <div class="col-12 text-center myfont-16 mb-3"><a href="{{ route('login') }}" class="btn btn-link p-0 m-0 align-baseline myResendButton">Zaloguj się</a>, aby wypożyczyć film.</div>
     
 @endif
 
