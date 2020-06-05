@@ -45,12 +45,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="start_date" class="col-lg-4 col-md-12 col-sm-12 col-form-label text-lg-right">{{ __('Data premiery') }}</label>
+                            <label for="start_date" class="col-lg-4 col-md-12 col-sm-12 col-form-label text-lg-right">{{ __('Rok premiery') }}</label>
 
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <input id="start_date" type="number"
                                     class="form-control @error('start_date') is-invalid @enderror" name="start_date"
-                                    value="{{ old('start_date') }}" autocomplete="start_date">
+                                    value="{{ old('start_date') }}" placeholder="od" autocomplete="start_date">
 
                                 @error('start_date')
                                 <span class="invalid-feedback" role="alert">
@@ -58,11 +58,10 @@
                                 </span>
                                 @enderror
                             </div>
-
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <input id="end_date" type="number"
                                     class="form-control @error('end_date') is-invalid @enderror" name="end_date"
-                                    value="{{ old('end_date') }}" autocomplete="end_date">
+                                    value="{{ old('end_date') }}" placeholder="do" autocomplete="end_date">
 
                                 @error('start_date')
                                 <span class="invalid-feedback" role="alert">
