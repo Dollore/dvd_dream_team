@@ -2,12 +2,11 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/user_profile_styles.css') }}" >
-<h2 class="myWhiteCenter">Historia wypożyczeń</h2>
     
     @if ($borrowings->isEmpty() && $afterDeadline->isEmpty())
         <h2 class="myh2 text-center">Nie masz jeszcze żadnych wypożyczeń</h2>
     @else
-    
+        <h2 class="myWhiteCenter">Historia wypożyczeń</h2>
         <div class="container">
 
             <table class="table myTable myfont-16">

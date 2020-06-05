@@ -16,7 +16,7 @@
 
 @section('content')
 </div> <!-- Zamykam myFlex z layouta -->
-<h1>BACKTOPAST</h1>
+
 <h1>Na co masz dziś ochotę?</h1>
 
 @if (Session::pull('showPopup'))
